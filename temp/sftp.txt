@@ -1,9 +1,10 @@
 {
-    "name": "My Server",
+    "name": "닷홈",
     "host": "ddu.dothome.co.kr",
     "protocol": "ftp",
     "port": 21,
     "username": "ddu",
+    "password": "web0712!",
     "remotePath": "/html/",
     "uploadOnSave": true,
     "useTempFile": false,
