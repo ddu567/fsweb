@@ -17,6 +17,8 @@
         아래내용을 숙지한 후 지우고 반복 연습해 봅니다.
      -->
     <h2>HTML5 시맨틱 코딩</h2>
+    <!-- 글로벌 속성(선택 속성): id, class, title, ... -->
+    <!-- id와 class는 CSS와 연결됩니다. -->
     <div class="wrap">
         <header>
             헤더
@@ -34,15 +36,17 @@
                     <h3>아티클</h3>
                 </article>
             </section>
-        </div>
+        </div><!-- //.container -->
+        <!-- //클래스 속성의 값이 container인 div의 종료 태그 -->
         <footer>
             푸터
         </footer>
-    </div>
+    </div><!-- //.wrap-->
+    <!-- //클래스 속성의 값이 wrap인 div의 종료 태그 -->
 
     <!-- id와 class의 값은 임의로 정함 -->
     <!-- 
-        이름 규칙: 
+        값(이름) 규칙: 
             1. 첫 글자는 영문자, _, -
             2. 두 번째 문자부터는 영문자, _, -, 숫자
             3. 대소문자 구별한다.
@@ -58,7 +62,7 @@
             <div id="nav">
                 내비게이션
             </div>
-            <div id="content">
+            <div id="section">
                 <h2>섹션</h2>
                 <div class="article">
                     <h3>아티클</h3>
