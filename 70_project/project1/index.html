@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>문학동네</title>
 </head>
+
 <body>
     <div id="wrap">
         <header>
-            <h1><a href="#">문학동네</a></h1>
+            <h1><a href="#"><img src="../images/mungakdongnelogo.png" alt="로고"></a></h1>
             <!-- GNB -->
             <nav class="gbn">
                 <ul class="main">
@@ -68,29 +70,59 @@
                 </ul>
             </nav>
         </header>
-    <!-- 이미지 슬라이드 -->
-    <div class="slide">
-        <ul>
-            <li><a href="#"><img src="" alt=""></a></li>
-            <li><a href="#"><img src="" alt=""></a></li>
-            <li><a href="#"><img src="" alt=""></a></li>
-            <li><a href="#"><img src="" alt=""></a></li>
-        </ul>
+        <!-- 이미지 슬라이드 -->
+        <div class="slide">
+            <ul>
+                <li><a href="#"><img src="../images/mhslide1.png" alt="있을 법한 모든 것"></a></li>
+                <li><a href="#"><img src="../images/mhslide2.png" alt="당신이 보고 싶어하는 세상"></a></li>
+                <li><a href="#"><img src="../images/mhslide3.png" alt="모래비가 내리는 모래 서점"></a></li>
+                <li><a href="#"><img src="../images/mhslide1.png" alt="있을 법한 모든 것"></a</li>
+            </ul>
+        </div>
     </div>
+    <!-- 모달 창 -->
+    <div class="modal">
+            <div class="popup">
+                <!-- 팝업 내용 -->
+                <h2>문학동네 리뉴얼 안내</h2>
+                <p>고객님들의 더욱 편리하고 안전한 정보 제공을 위해 웹사이트 리뉴얼이 진행됩니다. 리뉴얼 기간 중에는 상품 구매 및 결제가 불가하니 이점 참고 부탁드립니다. 문학동네를 이용해주시는 고객님들께 감사드리며, 더 나은 서비스로 다시 찾아뵙겠습니다. 감사합니다.</p>
+                <button type="button">닫기</button>
+            </div>
+        </div>
         <div id="contents">
-            <!-- 탭 메뉴 -->
-            <div class="tabs">공지사항/갤러리</div>
+            <!-- 탭 -->
+            <div id="tabs">
+                <!-- 버튼 영역 -->
+                <ul class="btn">
+                    <li><a href="#tab1">공지사항</a></li>
+                    <li><a href="#tab2">갤러리</a></li>
+                </ul>
+                <!-- 내용 영역 -->
+                <div id="tab1">
+                    <ul>
+                        <li><a href="#"><span>2023년 문학동네신인상 발표</span>2023.07.31</a></li>
+                        <li><a href="#"><span>문학동네 출판그룹 제작부에서 신입 및 경력 인력을 채용합니다.</span>2023.04.10</a></li>
+                        <li><a href="#"><span>서점에 계신 여러분들이 가장 사랑하는 문학동네 책은 무엇인가요?</span>2023.03.10</a></li>
+                        <li><a href="#"><span>문학동네 세계문학전집 제작 사양 변경 관련</span>2023.02.15</a></li>
+                    </ul>
+                </div>
+                <div id="tab2">
+                    <a href="#"><img src="../images/mhgallery1.png" alt="gallery1"></a>
+                    <a href="#"><img src="../images/mhgallery2.png" alt="gallery2"></a>
+                    <a href="#"><img src="../images/mhgallery3.png" alt="gallery3"></a>
+                </div>
+            </div>
             <!-- 배너 이미지 -->
             <div class="banner">
-                <a href="#"><img src="" alt=""></a>
+                <a href="#"><img src="../images/mhbanner.png" alt="banner"></a>
             </div>
             <!-- 바로가기 이미지 -->
             <div class="shortcut">
-                <a href="#"><img src="" alt=""></a>
+                <a href="#"><img src="../images/mhshortcut.png" alt="shortcut"></a>
             </div>
         </div>
         <footer>
-            <div class="blogo">하단 로고</div>
+            <div class="blogo"><img src="../images/mhdnlogo1.png" alt="로고"></div>
             <div class="copy">
                 <p>경기도 파주시 회동길 210</p>
                 <p>COPYRIGHT 2019 (주) MUNHAKDONGNE Publishing Corp.</p>
@@ -105,4 +137,5 @@
         </footer>
     </div>
 </body>
+
 </html>
