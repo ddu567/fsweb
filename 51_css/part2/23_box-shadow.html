@@ -24,7 +24,7 @@
         */
 
         /* 
-            박스 그림자:
+            박스 그림자: 숫자 세 개의 순서는 꼭 지켜야 하며, 숫자 사이에 다른 값 들어올 수 XX
             box-shadow: 가로위치 세로위치 [흐림] [퍼짐] [색] [inset], 가로위치 세로위치 [흐림] [퍼짐] [색] [inset], ... 
         */
 
@@ -39,22 +39,29 @@
 
         /* (1) .bs1의 박스 그림자를 가로 위치 5px, 세로 위치 10px로 지정하시오. */
         .bs1 {
-            box-shadow: 5px 10px;
+            box-shadow: 5px 31px;
         }
 
         /* (2) .bs2의 박스 그림자를 가로 위치 5px, 세로 위치 10px, 색상을 #888로 지정하시오. */
-
+        .bs2 {box-shadow: 5px 10px #888;;}
 
         /* (3) .bs3의 박스 그림자를 가로 위치 5px, 세로 위치 10px, 흐림 정도를 8px, 색상을 #888로 지정하시오. */
-
-
+        /* 
+            box-shadow: hOff vOff Blur color; 순서 주의-색상 제외!!
+            horizontal: 수평 -> 가로(좌우)
+            vertical: 수직 -> 세로(위아래)
+            */
+        .bs3 {box-shadow: 5px 10px 8px #888;}
+            
         /* (4) .bs4의 박스 그림자를 가로 위치 5px, 세로 위치 10px, 흐림 정도를 8px, 퍼짐 정도를 10px, 색상을 #888로 지정하시오. */
-
+        /* box-shadow: hOff vOff Blur spread color; */
+        .bs4 {box-shadow: 5px 10px 8px 10px #888;}
 
         /* (5) .bs5의 박스 그림자를 가로 위치 5px, 세로 위치 5px, 색상은 blue, 가로 위치는 10px, 세로 위치는 10px, 색상은 red로, 가로 위치는 15px, 세로 위치는 15px, 색상은 green으로 둘 이상의 그림자를 추가하시오. */
-
+        .bs5 {box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;}
 
         /* (6) .bs6의 박스 그림자를 가로 위치는 5px, 세로 위치는 5px, 흐림 정도를 5px, 색상은 #aaa, 내부 그림자로 지정하시오. */
+        .bs6 {box-shadow: 5px 5px 5px #aaa inset;}
 
     </style>
 </head>
