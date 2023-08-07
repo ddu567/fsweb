@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭</title>
+    <style>
+        /* reset(초기화) */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* 탭 */
+
+        #tabs input {display: none;}
+
+        #tabs input:checked + div {
+            display: block;
+        }
+  
+        #tabs div {
+            display: none;
+            position: absolute;
+            top: 40px;
+            width: 400px;
+            height: 160px;
+        }
+
+        /* 공자시항 */
+        #tab1 {
+            background-color: lightblue;
+        }
+
+        #tab1 li {
+            border-bottom: 1px solid red;
+            padding-bottom: 8px;
+            margin: 8px 0;
+        }
+
+        #tab1 span {
+            display: inline-block;
+            width: 310px;
+        }
+
+        /* 갤러리 */
+        #tabs #tab2 {
+            /* box-sizing: border-box; */
+            /* width: calc(400px - 32px); */
+            background-color: lightcoral;
+            padding: 24px 16px;
+        }
+
+        #tab2 a {
+            margin: 0 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 탭 -->
+    <div id="tabs">
+        <!-- 공지사항 -->
+        <label for="btn1">공지사항</label>
+        <input type="radio" name="tabs" id="btn1" checked>
+        <div id="tab1">
+            <ul>
+                <li><a href="#"><span>2023년 문학동네신인상 발표</span>2023.07.31.</a></li>
+                <li><a href="#"><span>문학동네 출판그룹 제작부에서 신입 및 ..</span>2023.04.10.</a></li>
+                <li><a href="#"><span>서점에 계신 여러분들이 가장 사랑하는 ..</span>2023.03.10.</a></li>
+                <li><a href="#"><span>문학동네 세계문학전집 제작 사양 변경 ..</span>2023.02.15.</a></li>
+            </ul>
+        </div>
+        <!-- 갤러리 -->
+        <label for="btn2">갤러리</label>
+        <input type="radio" name="tabs" id="btn2">
+        <div id="tab2">
+            <a href="#"><img src="../assets/images/mhgallery1.png" alt="gallery1"></a>
+            <a href="#"><img src="../assets/images/mhgallery2.png" alt="gallery2"></a>
+            <a href="#"><img src="../assets/images/mhgallery3.png" alt="gallery3"></a>
+        </div>
+    </div>
+</body>
+
+</html>

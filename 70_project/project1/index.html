@@ -64,10 +64,7 @@
                             <li><a href="#">동네서점</a></li>
                             <li><a href="#">학교/도서관</a></li>
                         </ul>
-                    </li>
-                    <li>
-                        <a href="#">웹진</a>
-                    </li>
+                    </li>                    
                 </ul>
             </nav>
         </header>
@@ -77,12 +74,12 @@
                 <li><a href="#"><img src="images/mhslide1.png" alt="있을 법한 모든 것"></a></li>
                 <li><a href="#"><img src="images/mhslide2.png" alt="당신이 보고 싶어하는 세상"></a></li>
                 <li><a href="#"><img src="images/mhslide3.png" alt="모래비가 내리는 모래 서점"></a></li>
-                <li><a href="#"><img src="images/mhslide1.png" alt="있을 법한 모든 것"></a< /li>
+                <li><a href="#"><img src="images/mhslide1.png" alt="있을 법한 모든 것"></a></li>
             </ul>
         </div>
 
         <!-- 모달 창 -->
-        <div class="modal">
+        <div id="modal">
             <div class="popup">
                 <!-- 팝업 내용 -->
                 <h2>문학동네 리뉴얼 안내</h2>
@@ -94,41 +91,49 @@
         <div id="contents">
             <!-- 탭 -->
             <div id="tabs">
-                <!-- 버튼 영역 -->
-                <ul class="btn">
-                    <li><a href="#tab1">공지사항</a></li>
-                    <li><a href="#tab2">갤러리</a></li>
-                </ul>
-                <!-- 내용 영역 -->
+                <!-- 공지사항 -->
+                <label for="btn1">공지사항</label>
+                <input type="radio" name="tabs" id="btn1" checked>
                 <div id="tab1">
                     <ul>
-                        <li><a href="#"><span>2023년 문학동네신인상 발표</span>2023.07.31</a></li>
-                        <li><a href="#"><span>문학동네 출판그룹 제작부에서 신입 및 경력 인력을 채용합니다.</span>2023.04.10</a></li>
-                        <li><a href="#"><span>서점에 계신 여러분들이 가장 사랑하는 문학동네 책은 무엇인가요?</span>2023.03.10</a></li>
-                        <li><a href="#"><span>문학동네 세계문학전집 제작 사양 변경 관련</span>2023.02.15</a></li>
+                        <li><a href="#"><span>2023년 문학동네신인상 발표</span>2023.07.31.</a></li>
+                        <li><a href="#"><span>문학동네 출판그룹 제작부에서 신입 및 ..</span>2023.04.10.</a></li>
+                        <li><a href="#"><span>서점에 계신 여러분들이 가장 사랑하는 ..</span>2023.03.10.</a></li>
+                        <li><a href="#"><span>문학동네 세계문학전집 제작 사양 변경 ..</span>2023.02.15.</a></li>
                     </ul>
                 </div>
+                <!-- 갤러리 -->
+                <label for="btn2">갤러리</label>
+                <input type="radio" name="tabs" id="btn2">
                 <div id="tab2">
                     <a href="#"><img src="images/mhgallery1.png" alt="gallery1"></a>
                     <a href="#"><img src="images/mhgallery2.png" alt="gallery2"></a>
                     <a href="#"><img src="images/mhgallery3.png" alt="gallery3"></a>
                 </div>
-            </div>
+            </div><!-- ##tabs -->
+            
             <!-- 배너 이미지 -->
             <div class="banner">
                 <a href="#"><img src="images/mhbanner.png" alt="banner"></a>
             </div>
+            
             <!-- 바로가기 이미지 -->
             <div class="shortcut">
                 <a href="#"><img src="images/mhshortcut.png" alt="shortcut"></a>
             </div>
-        </div>
+        </div><!-- ##contents -->
+            
         <footer>
+            <!-- 하단로고 -->
             <div class="blogo"><img src="images/mhdnlogo1.png" alt="로고"></div>
+
+            <!-- 주소 및 저작권 -->
             <div class="copy">
-                <p>경기도 파주시 회동길 210</p>
+                <p>경기도 파주시 회동길 210</p>                
                 <p>COPYRIGHT 2019 (주) MUNHAKDONGNE Publishing Corp.</p>
             </div>
+
+            <!-- SNS -->
             <div class="sns">
                 <ul>
                     <li><a href="#">트위터</a></li>
@@ -137,7 +142,7 @@
                 </ul>
             </div>
         </footer>
-    </div>
+    </div><!-- //#wrap -->
 </body>
 
 </html>

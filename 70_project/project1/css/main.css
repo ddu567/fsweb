@@ -1,37 +1,195 @@
 @charset "utf-8";
 
 /* 작업중 */
-/* body * {outline: 1px solid lime;} */
+/* body * {
+    outline: 1px solid lime;
+} */
 
 /* resset */
 * {
+    /* 요소의 패딩과 테두리를 요소의 안쪽으로 지정 */
     box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+p,
+ul,
+button {
     margin: 0;
+}
+
+ul,
+button {
     padding: 0;
 }
+
+ul {
+    list-style: none;
+}
+
+/* img {
+    vertical-align: top;
+} */
+
 /* common */
 #wrap {
     width: 1200px;
+    /* 가로 가운데 */
     margin: 0 auto;
 }
+
+/* header */
+header {
+    height: 100px;
+    padding: 30px;
+}
+
 /* logo */
 .logo {
     float: left;
 }
+
 /* gnb */
 #gnb {
     float: right;
+    margin-top: 10px;
 }
+
 /* 1depth */
 #gnb .main li {
     display: inline-block;
+    width: 120px;
 }
+
 /* 2depth */
 #gnb .sub {
     display: none;
 }
 
 /* slide */
-#slide li{
+#slide {
+    height: 300px;
+}
+
+#slide li {
     position: absolute;
 }
+
+/* modal */
+#modal {
+    display: none;
+}
+
+/* contents */
+#contents {
+    height: 200px;
+    padding: 5px 0;
+    /* text-align: left; */
+}
+
+#contents>div {
+    float: left;
+    /* 1200-424=776/2=388 */
+    width: 380px;
+}
+
+/* 탭 */
+/* 버튼 */
+#contents #tabs {
+    width: 424px;
+}
+input {
+    display: none;
+}
+#tabs input:checked + div {
+    display: block;
+}
+#tabs  {
+    /* float:left; */
+    display: inline-block;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* 내용 공통 */
+#tabs div {
+    display: none;
+    position: absolute;
+    width: 424px;
+    height: 160px;
+}
+
+label {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #BEC6D4;
+}
+/* 공지사항 */
+#tab1 li {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+    margin: 4px 0;
+}
+
+#tab1 span {
+    display: inline-block;
+    width: 334px;
+}
+
+/* 갤러리 */
+#tabs #tab2 {
+    /* box-sizing: border-box; */
+    /* width: calc(400px - 32px); */
+    padding: 24px 16px;
+}
+#tab2 a {
+    margin: 0 4px;
+}
+
+/* banner */
+.banner {
+    margin-left: 8px;
+}
+/* shortcut */
+#contents .shortcut {
+    float: right;
+}
+
+footer {
+    height: 100px;
+    background-color: #6e6f70;
+    color: #fff;
+    padding: 30px;
+}
+
+footer a {
+    /* a 태그는 글자색을 별도 지정한다. */
+    color: #fff;
+}
+
+footer div {
+    float: left;
+}
+
+/* 하단로고 */
+.blogo {
+    width: 200px;
+}
+/* 주소 및 저작권 */
+.copy {
+    width: 640px;
+}
+/* SNS */
+.sns {
+    width: 300px;
+}
+
+.sns li {
+    float: left;
+    margin: 0 16px;
+}
+

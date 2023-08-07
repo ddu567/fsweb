@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML+CSS</title>
+    <title>이미지 8장 배치</title>
     <style>
+        .clearfix::affter {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
         ul {
             width: 1504px;
             height: 480px;
@@ -13,6 +19,7 @@
             margin-bottom:0;
             padding-left:0;
             background-color: yellow;
+            /* overflow: hidden; */
         }
 
 
@@ -33,7 +40,7 @@
 </head>
 <body>
     <h1>플로트</h1>
-    <ul>
+    <ul class="clearfix">
         <li class="div1">박스1</li>
         <li class="div2">박스2</li>
         <li class="div3">박스3</li>
@@ -42,6 +49,6 @@
         <li class="div3">박스6</li>
         <li class="div2">박스7</li>
         <li class="div1">박스8</li>
-    </ul>
+    </ulc>
 </body>
 </html>
