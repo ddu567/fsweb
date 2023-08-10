@@ -1,5 +1,4 @@
 @charset "utf-8";
-@import url(typo.css);
 /* 초기화 */
 * {box-sizing: border-box;}
 body, h1, ul {margin: 0;}
@@ -17,6 +16,7 @@ img {width: 100%;}
 /* 와이어프레임 */
 header {background-color: lightblue;}
 .sec {height: 800px;}
+#sec1 {background-color: lightcoral;}
 #sec2 {background-color: lightgoldenrodyellow;}
 #sec3 {background-color: lightsalmon;}
 #sec4 {background-color: lightgray;}
@@ -98,13 +98,6 @@ header {
 
 
 /* 섹션4 */
-input {
-    width: 100%;
-    height: 40px;
-    border: 1px solid #ccc;
-    padding: 8px;
-    margin-left: 8px;
-    margin-top: 8px;
-}
+
 
 /* 푸터 */

@@ -6,9 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+        white-space: 공백 처리; -> 줄바꿈 여부
+            공백: space bar(스페이스 바), tab(탭), Enter(엔터)
+            값: normal, nowrap, pre, pre-wrap, pre-line
+
+        이것은 문장입니다.
+        white-space: nowrap;
+
+        <br>: 줄 바꿈
+        <pre>: 기록한 그대로 표시
+        */
         /* 자동 줄 바꿈(o), Enter(x), sp/tab(x) */
         .whn {white-space: normal;}
         /* 자동 줄 바꿈(x), Enter(x), sp/tab(x) */
+        /* wrap 줄바꿈o, nowrap 줄바꿈x */
         .whnw {white-space: nowrap;}
         /* 자동 줄 바꿈(x), Enter(o), sp/tab(o) */
         .whp {white-space: pre;}
@@ -21,24 +33,24 @@
 <body>
     <h1>CSS 텍스트 속성</h1>
     <h2>white-space</h2>
-    <p class="whn">Lorem           ipsum dolor sit. Lorem ipsum dolor sit. 
+    <p class="whn">Lorem psum dolor sit. Lorem ipsum dolor sit. 
         Lorem            ipsum dolor sit. Lorem ipsum dolor sit. 
         Lorem ipsum dolor sit. Lorem ipsum dolor sit. 
         Lorem ipsum dolor sit.</p>
-    <p class="whnw">Lorem           ipsum dolor sit. Lorem ipsum dolor sit. 
-        Lorem            ipsum dolor sit. Lorem ipsum dolor sit. 
+    <p class="whnw">Lorem ipsum dolor sit. Lorem ipsum dolor sit. 
+        Lorem ipsum dolor sit. Lorem ipsum dolor sit. 
         Lorem ipsum dolor sit. Lorem ipsum dolor sit. 
         Lorem ipsum dolor sit.</p>
-    <p class="whp">Lorem           ipsum dolor sit. Lorem ipsum dolor sit. 
-        Lorem            ipsum dolor sit. Lorem ipsum dolor sit. 
+    <p class="whp">Lorem ipsum dolor sit. Lorem ipsum dolor sit. 
+        Lorem ipsum dolor sit. Lorem ipsum dolor sit. 
         Lorem ipsum dolor sit. Lorem ipsum dolor sit. 
         Lorem ipsum dolor sit.</p>
-    <p class="whpw">Lorem           ipsum dolor sit. Lorem ipsum dolor sit. 
-        Lorem            ipsum dolor sit. Lorem ipsum dolor sit. 
+    <p class="whpw">Lorem ipsum dolor sit. Lorem ipsum dolor sit. 
+        Lorem ipsum dolor sit. Lorem ipsum dolor sit. 
         Lorem ipsum dolor sit. Lorem ipsum dolor sit. 
         Lorem ipsum dolor sit.</p>
-    <p class="whpl">Lorem           ipsum dolor sit. Lorem ipsum dolor sit. 
-        Lorem            ipsum dolor sit. Lorem ipsum dolor sit. 
+    <p class="whpl">Lorem ipsum dolor sit. Lorem ipsum dolor sit. 
+        Lorem   ipsum dolor sit. Lorem ipsum dolor sit. 
         Lorem ipsum dolor sit. Lorem ipsum dolor sit. 
         Lorem ipsum dolor sit.</p>
 

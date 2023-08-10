@@ -7,6 +7,7 @@
     <title>HTML+CSS</title>
     <style>
         /* 
+        
             :link
             :visited
             :hover
@@ -49,6 +50,14 @@
             홀수: 2n-1 또는 odd
         */
 
+        p:first-child {color: red;}
+        p:last-child {color: red;}
+        p:nth-child(2) {color: red} 
+        p:nth-child(1) {background-color: orange;} 
+        p:nth-child(12) {background-color: orange;} 
+        p:nth-last-child(1) {border: 1px solid red;} 
+        p:nth-child(even) {font-size: 12px;}
+        p:nth-child(2n+1) {font-style: italic;}
     </style>
 </head>
 <body>
@@ -67,6 +76,7 @@
         <p>10 번째 요소입니다.</p>
         <p>11 번째 요소입니다.</p>
         <p>12 번째 요소입니다.</p>
+        <p>13 번째 요소입니다.</p>
     </div>
 </body>
 </html>
