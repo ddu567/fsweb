@@ -10,9 +10,11 @@ body, h1, h2, h3, p, ul {
 }
 ul {
     padding: 0;
+    list-style: none;
 }
 img {
-    width: 100%
+    width: 100%;
+    vertical-align: top;
 }
 input {
     border: none;

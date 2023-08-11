@@ -16,6 +16,12 @@ footer {
     background-color: #777;
 }
 
+/* 패럴렉스 스크롤링(parallax Scrolling */
+.parallax {
+    height: 400px;
+    background: no-repeat center/cover fixed;
+}
+
 /* 헤더 */
 header {
     z-index: 9999;
@@ -42,7 +48,8 @@ header {
 /* 단위: px, %, em, rem, vw,vh, vmin, vmax */
 #sec1 {
     position: relative;
-    height: 700px;
+    height:100vh;
+    background-image: url(../images/bg1.png);
 }
 #sec1 h1 {
     position: absolute;
@@ -82,6 +89,9 @@ header {
 
 
 /* 섹션3: 작품 */
+#sec3 .parallax {
+    background-image: url(../images/bg2.png);
+}
 .pf li {
     width: 225px;
     float:left;
@@ -93,6 +103,9 @@ header {
 }
 
 /* 섹션4: 연락처 */
+#sec4 .parallax {
+    background-image: url(../images/bg3.png);
+}
 .map {
     float: left;
     width:284px;
