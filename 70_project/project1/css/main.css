@@ -21,7 +21,12 @@ img {
     vertical-align: top;
 }
 
-/* typo */
+/* 
+    typo - 글꼴, 크기, 색, 자간, 굵기, 기울임, 밑줄
+    font: 스타일 크기/줄간격 글꼴;
+    letter-spacing: 자간
+    clolor: 글자색
+*/
 html {
     font-size: 10px;
 }
@@ -40,13 +45,10 @@ a {
     font-size: 1.4rem;
     color: #777;
 }
-.blogo {
-    text-align: right;
-    opacity: .3;
-}
+
 .copy {
+    line-height: 50px;
     color: #999;
-    text-align: center;
 }
 .copy p:last-of-type {
     font-size: 1.2rem;
@@ -68,6 +70,7 @@ header {
 /* logo */
 .logo {
     float: left;
+    vertical-align: middle;
 }
 
 /* gnb */
@@ -183,10 +186,12 @@ label {
 
 footer {
     height: 100px;
-    background-color: #6e6f70;
+    background: linear-gradient(#6e6f70 50%, #6a6a6a 50%);
     color: #fff;
-    padding: 30px;
+    padding: 0 30px;
+    position: relative;
 }
+
 
 footer a {
     /* a 태그는 글자색을 별도 지정한다. */
@@ -197,17 +202,24 @@ footer div {
     float: left;
 }
 
-/* 하단로고 */
-.blogo {
-    width: 200px;
-}
+
 /* 주소 및 저작권 */
 .copy {
-    width: 640px;
+    float: left;
+    background: url('../images/blogo.png') no-repeat 200px 50%/200px;
+    padding-left: 400px;
+    
+
 }
+    
 /* SNS */
 .sns {
+    float: right;
     width: 300px;
+    top: 35%;
+    right: 0;
+    line-height: 100px;
+
 }
 
 .sns li {
