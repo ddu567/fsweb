@@ -45,6 +45,15 @@ header {
     width: 1500px;
     margin: 0 auto;
 }
+h2 {
+    line-height: 3.6rem;
+    margin: 1rem 0;
+    padding: 1.6rem 0;
+    border-bottom:1px solid #f1f1f1;
+}
+h3 {
+    line-height: 3.6rem;
+}
 
 /* 섹션1 */
 #sec1 {
@@ -81,6 +90,12 @@ header {
 
 /* 섹션2 */
 /* id > class, 가상 클래스(:), 속성 > 요소, 가상요소(::) */
+#sec2 div {
+    width: 100%;
+    height:153px;
+    padding: 40px 0;
+    margin-top: 80px;
+}
 #sec2 li {
     position: relative;
 }
@@ -95,6 +110,9 @@ header {
 }
 
 /* 섹션3 */
+#sec3 li {
+    padding: 0 8px;
+}
 .ex {
     height: 100px;
 }
@@ -103,8 +121,18 @@ header {
     padding: 8px 16px;
     margin: 16px 0;
 }
+#sec3 p {
+    margin: 15px 0;
+}
+
+#sec3 h3 {
+    margin: 10px 0;
+}
 
 /* 섹션4 */
+#sec4{
+    height: 1350px;
+}
 input {
     width: 100%;
     height: 40.5px;
@@ -120,9 +148,21 @@ input {
     border: none;
     padding: 8px 16px;
     margin: 16px 0;
+    margin-bottom: 50px;
     display: inline-block;
+}
+#sec4 p {
+    padding: 15px 0;
 }
 
 
 /* 푸터 */
-footer {background-color: #01051E;}
+footer {
+    width: 100%;
+    height: 84.5px;
+    padding: 16px 0;
+    background-color: #01051E;
+}
+img {
+    vertical-align: middle;
+}

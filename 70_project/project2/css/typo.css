@@ -5,3 +5,18 @@ html {font-size: 10px;}
 body {font: 1.5rem/1.8 'Noto Sans KR', sans-serif;}
 
 a {color: #111;}
+
+h2, h3 {
+    font-size: 2.4rem;
+}
+
+
+
+footer {
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+}
+#sec4 input {
+    font-size: 1.5rem;
+}

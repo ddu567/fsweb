@@ -10,8 +10,8 @@
 <rect x="111" y="2" width="5" height="4" fill="#0A18A2"/>
 <rect x="50" y="5" width="5" height="11" fill="#0A18A2"/>
 <rect x="134" y="25" width="4.5" height="11" fill="#0A18A2"/>
-<rect x="177" y="25" width="4" height="12" fill="#0A18A2"/>
-<rect x="189" y="25" width="4" height="12" fill="#0A18A2"/>
+<rect x="178" y="25" width="4" height="12" fill="#0A18A2"/>
+<rect x="190" y="25" width="4" height="12" fill="#0A18A2"/>
 <rect x="121" y="22" width="4.5" height="10" fill="#0A18A2"/>
 <rect x="190" y="5" width="4" height="8" fill="#0A18A2"/>
 <rect x="108" y="28" width="4.5" height="9" fill="#0A18A2"/>
@@ -48,16 +48,14 @@
 <rect x="178" y="10" width="16" height="3" fill="#0A18A2"/>
 <rect x="178" y="15" width="16" height="3" fill="#0A18A2"/>
 <rect x="108" y="34" width="17" height="4" fill="#0A18A2"/>
-<rect x="177" y="27" width="16" height="4" fill="#0A18A2"/>
-<rect x="177" y="33" width="16" height="4" fill="#0A18A2"/>
+<rect x="178" y="27" width="16" height="4" fill="#0A18A2"/>
+<rect x="178" y="33" width="16" height="4" fill="#0A18A2"/>
 <rect x="108" y="28" width="17" height="4" fill="#0A18A2"/>
 <rect x="79" y="10" width="7" height="4" fill="#0A18A2"/>
 <rect x="42" y="10" width="7" height="4" fill="#0A18A2"/>
 <rect x="144" y="10" width="7" height="4" fill="#0A18A2"/>
 <rect x="49" y="20" width="18" height="4" fill="#0A18A2"/>
 <rect x="3" y="20" width="19" height="4" fill="#0A18A2"/>
-<circle cx="57.75" cy="30.75" r="7.75" fill="#0A18A2"/>
-<circle cx="30.25" cy="14.25" r="6.25" fill="#0A18A2"/>
-<circle cx="30.5" cy="14.5" r="2.5" fill="white"/>
-<circle cx="58" cy="31" r="3" fill="white"/>
+<path d="M65.5 30.75C65.5 35.0302 62.0302 38.5 57.75 38.5C53.4698 38.5 50 35.0302 50 30.75C50 26.4698 53.4698 23 57.75 23C62.0302 23 65.5 26.4698 65.5 30.75ZM54.5747 30.75C54.5747 32.5037 55.9963 33.9253 57.75 33.9253C59.5037 33.9253 60.9253 32.5037 60.9253 30.75C60.9253 28.9963 59.5037 27.5747 57.75 27.5747C55.9963 27.5747 54.5747 28.9963 54.5747 30.75Z" fill="#0A18A2"/>
+<path d="M36 15C36 18.3137 33.3137 21 30 21C26.6863 21 24 18.3137 24 15C24 11.6863 26.6863 9 30 9C33.3137 9 36 11.6863 36 15ZM27.9012 15C27.9012 16.1591 28.8409 17.0988 30 17.0988C31.1591 17.0988 32.0988 16.1591 32.0988 15C32.0988 13.8409 31.1591 12.9012 30 12.9012C28.8409 12.9012 27.9012 13.8409 27.9012 15Z" fill="#0A18A2"/>
 </svg>

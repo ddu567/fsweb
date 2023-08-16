@@ -206,7 +206,7 @@ footer div {
 /* 주소 및 저작권 */
 .copy {
     float: left;
-    background: url('../images/blogo.png') no-repeat 200px 50%/200px;
+    background: url('../images/blogo.svg') no-repeat 200px 50%/200px;
     padding-left: 400px;
     
 
