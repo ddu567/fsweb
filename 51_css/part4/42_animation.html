@@ -17,16 +17,63 @@
 
         /* 
             animation-name: 애니메이션 이름;
-            animation-duration: 애니메이션 시간(단위: s(초));
+            animation-duration: 애니메이션 시간(단위: s(초)); 속기형: 先, 생략x
             animation-iteration-count: 애니메이션 반복 여부;
+                값: 숫자, infinite
             animation-direction: 애니메이션 방향;
+                값: normal(기본), alternate, reverse
             animation-timing-function: 애니메이션 시간 함수;
-            animation-delay: 애니메이션 지연 시간(단위: s(초));
+                값: ease, ease-in, ease-out, ease-in-out, linear, cubic-bezier
+            animation-delay: 애니메이션 지연 시간(단위: s(초)); 속기형: 後, 생략o
+
+            animation-fill-mode: 값;
+                값: none
+                    forwards: 100% 상태 유지, 반복 횟수는 1로 지정 -> 해태제과 구름, 텍스트
+                    backwards: 0% (keyframe)에서 시작
+                    both:
+
+            animation-play-state: 실행 상태;
+                값: running, paused
+
+            (속기형)
+            animation: name duration [delay] [timing-function] [iteration-count] [direction]
+            애니메이션: 이름 시간 [지연 시간] [가속도] [반복횟수] [방향]
+
+            키프레임, 프레임 -> 애니메이션의 작업 단위
+            @keyframes 이름 {
+                from {시작 CSS}
+                to {끝 CSS}
+            }
+
+            @keyframe 이름 {
+                0%{시작 CSS}
+                50.1% {중간 CSS}
+                50.2% {중간 CSS}
+                50.3% {중간 CSS}
+                50.33% {중간 CSS} -> 소수점 5자리까지 가능
+                100% {끝 CSS}
+            }
+        */
+        /* 
+            애니메이션의 이름 규칙
+            1. 영문의 대소문자 구별한다.
+            2. 첫 글자는 영문자, -, _로 쓴다.
+            3. 두 번째 글자부터 영문자, _, -, 숫자 사용
         */
 
 
         /* .anim에 애니메이션의 이름은 move, 시간은 1초, 무한 반복(infinite), 좌우 왕복(alternate), 등속도(linear), 지연 시간은 2초로 지정하시오. */
+        .anim {
+            /* animation-name: move;
+            animation-duration: 1s;
+            animation-timing-function: ease;
+            animation-delay: 2s;
+            animation-iteration-count: infinite; */
+            
 
+            /* (속기형) */
+            animation: move 1s ease 2s infinite alternate;
+        }
 
         
         /* 
@@ -46,7 +93,10 @@
 
         @keyframes move {
             0% {left:0;}
-            100% {left:200px;}
+            25% {left: 200px; top: 0;}
+            50% {left: 200px; top: 200px;}
+            75% {left: 0; top: 200px;}
+            100% {left: 0; top: 0;}
         }
 
     </style>

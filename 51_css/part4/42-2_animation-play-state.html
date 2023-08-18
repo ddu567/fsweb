@@ -8,26 +8,32 @@
     <style>
         div {
             position: relative;
-            width:100px;
-            height:100px;
-            background: yellow;
+            left: -150px;
+            top: -150px;
+            width:300px;
+            height:300px;
             margin:20px;
             left:0px; top:0px;
+            text-indent: -9999em;
         }
 
-        .wrap {
+        /* .wrap {
             width:300px;
             border:1px solid red;
             background: transparent;
             margin-bottom: 100px;
-        }
+        } */
 
         /* 애니메이션 실행 여부 */
-        .wrap:hover .anim {
+        /* .wrap:hover .anim {
             animation-play-state: running;
+        } */
+        .anim:hover  {
+            animation-play-state: pasued;
         }
         .anim {
-            animation: rotate 1s infinite linear paused;
+            background: url(../assets/images/txt.png) no-repeat 50% 50%/contain;
+            animation: rotate 5s infinite linear;
         }
         @keyframes rotate {
             0% {transform: rotate(0);}
@@ -38,8 +44,11 @@
 <body>
     <h1>애니메이션</h1>
     <h2>animation-play-state</h2>
-    <div class="wrap">
+    
+    <div class="anim">텍스트 애니메이션</div>
+    
+    <!-- <div class="wrap">
         <div class="anim">infinite</div>
-    </div>
+    </div> -->
 </body>
 </html>
