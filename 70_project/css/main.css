@@ -120,3 +120,22 @@ input:nth-of-type(2) {float: right; width: 49%}
 input:nth-of-type(3) {float: left; display: block; width: 100%; margin-top: 8px;}
 
 /* 푸터 */
+footer {
+    height: 288px;
+    background-color: #111;
+
+}
+footer:hover {
+    background-color: #777;
+}
+.tbtn {
+    width: 127px;
+    height: 43px;
+    background-color: #ccc;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 auto;
+}
+.sns {
+    display: inline-block;
+}
