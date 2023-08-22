@@ -27,7 +27,7 @@ ul {
     margin: 0;
 }
 
-ul {
+ul, ol {
     padding: 0;
     list-style: none;
 }
@@ -76,9 +76,14 @@ header {
 
 
 /* 섹션3 */
-
-
-/* 섹션4 */
-
-
-/* 섹션5 */
+/* 채용 */
+.recruit li {
+    display: inline-block;
+}
+.recruit span {
+    display: block;
+}
+.recruit img {
+    width: 90px;
+    height: 90px;
+}

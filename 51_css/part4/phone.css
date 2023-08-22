@@ -1,0 +1,6 @@
+@caharset "utf-8";
+
+/* phone: 최대 767px <- 767px 이상인 장치 */
+body {
+    background: red;
+}
