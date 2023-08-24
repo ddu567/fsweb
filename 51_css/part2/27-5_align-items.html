@@ -12,8 +12,9 @@
                 flex-direction
                 flex-wrap
                 flex-flow
-                justify-content: 주축 정렬
-                    값: flex-start, flex-end, center, space-between, space-around, space-evenly
+                justify-content: 주축 정렬;
+                    값: flex-start, flex-end, center
+                        space-between, space-around, space-evenly
                 align-items: 교차축 정렬
                     값: normal(stretch|flex-start)
                         stretch: 아이템의 크기를 지정하지 않았을 경우 기본값
@@ -34,13 +35,13 @@
 
         /* 교차축 세로 */
         .wrap1 .container {
-            height:400px;
+            height: 600px;
         }
         .wrap1 .container div {
             width:100px;
         }
-        /* 플렉스 컨테이너 크기 만큼 늘어남. */
-        /* 플렉스 아이템의 height를 지정하면 늘어나지 않고, flex-start로 지정된다. */
+        /* 플렉스 아이템의 height를 지정x -> stretch */
+        /* 플렉스 아이템의 height를 지정o -> flex-start */
         .ais {align-items: normal;}
 
         
@@ -53,9 +54,13 @@
         /* (3) .aife에 플렉스 아이템을 교차축의 가운데 정렬하기 위해 속성을 지정하시오. */
         .aic { align-items: center;}
 
-        /* (4) .aic에 플렉스 아이템을 텍스트 아래 기준선에 맞춰 정렬하기 위해 속성을 지정하시오. */
+        /* (4) .aib에 플렉스 아이템을 텍스트 아래 기준선에 맞춰 정렬하기 위해 속성을 지정하시오. */
         .aib {align-items: baseline;}
-
+        .wrap1 .aib div{writing-mode: horizontal-tb;}
+        .wrap2 .aib div{
+            transform: rotate(90deg)
+            /* writing-mode: vertical-rl; */
+        }
 
 
         .aib div:nth-child(1) {font-size:3rem;}
@@ -68,6 +73,7 @@
             display: flex;
         }
         .wrap2 .container {
+            /* 주축이 세로, 교차축은 가로 */
             flex-direction: column;
             width:200px;
         }
