@@ -5,14 +5,8 @@
 
 /* 작업중 */
 * {
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
-
-#sec3 {
-    background-color: lightgray;
-}
-
-
 
 /* typo */
 #sec1 ul {
@@ -52,24 +46,28 @@ h2 span:nth-of-type(2) {
 
 
 /* 섹션 공통 */
-h2 {padding: 48px 0 8px 0;}
+h2 {padding-top: 48px;}
 h3 {margin: 56px 0;}
 dd {margin:0;}
+.h2ex {
+    margin-bottom: 80px;
+}
+
+
 
 
 /* 섹션1 */
 #sec1 {
-    padding-top: 120px;
+    padding-top: 100px;
 }
 
 #sec1 ul {
-    /* width: 1400px; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 auto;
     width: 1150px;
-    padding: 50px 0;
+
 }
 #sec1 li {
     width: 550px;
@@ -82,9 +80,12 @@ dd {margin:0;}
     margin-top: 40px;
 }
 #sec1 dt {
-    margin-top: 140px;
     text-align: center;
     vertical-align: middle;
+    width: 400px;
+    margin: 140px auto 0;
+    background: rgb(37, 37, 37, 0.6) ;
+    border-radius: 30px;
 }
 
 /* 호버 전 */
@@ -211,7 +212,7 @@ dd {margin:0;}
     margin-top: 50px;
 }
 
-strong {
+.career strong {
     display: block;
     font-weight: bold;
     color: #009223;
@@ -245,31 +246,72 @@ strong {
 .artist h2 span:nth-of-type(1){
     margin-bottom: 2px;
 }
+
+
+.slide li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 200px;
+}
+.info {
+    width: 400px;
+    height: 120px;
+}
+.info strong {
+    font-size: 2.2rem;
+}
+.info p {
+    margin-top: 15px;
+}
+
 /* 채용 */
 .recruit {
     padding: 100px;
 }
 
-.recruit h3 {margin-bottom: 10px;}
-.recruit p {margin-bottom: 50px;}
+
+
+.recruit p {
+    margin-bottom: 10px;
+}
 
 .recruit ul {
     display: flex;
     justify-content: space-between;
-    width: 600px;
+    width: 800px;
     margin: 0 auto;
 }
 
-.recruit a {
-    margin: 0;
-    padding: 0;
-}
-
-.recruit span {
+.recruit li a {
     display: block;
 }
-
-.recruit img {
-    width: 100px;
-    height: 100px;
+.heaven {
+    background: url(../images/sub1/sub1_sec3_recruit_01.png) no-repeat;
+    width: 150px;
+    height: 150px;
+    
 }
+.mon {
+    background: url(../images/sub1/sub1_sec3_recruit_02.png) no-repeat;
+    width: 150px;
+    height: 150px;
+}
+.home {
+    background: url(../images/sub1/sub1_sec3_recruit_03.png) no-repeat;
+    width: 150px;
+    height: 150px;
+}
+
+
+.recruit .anim:hover {
+    animation: move .15s steps(2) forwards; 
+}
+
+@keyframes move {
+    0% {background-position: 0 0;}
+    100% {background-position: -300px 0;}
+}
+
+
+
