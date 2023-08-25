@@ -91,6 +91,7 @@ li {
     background: #fff;
     line-height: 36px
 }
+
 .subn a {
     font-size: 1.7rem;
 }
@@ -115,6 +116,7 @@ li {
 .sns ul {
     width: 160px;
     display: flex;
+    
 }
 
 .sns li {
@@ -122,12 +124,14 @@ li {
     height: 100px;
     text-align: center;
     line-height: 112px;
+    
 }
 
 
 .sns img {
     width: 25px;
 }
+
 /* 푸터 */
 
 footer {
