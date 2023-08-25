@@ -2,28 +2,46 @@
 
 table, th, td {
     border:1px solid;
-
+}
+th {
+    width: 80px;
+    background: lightcoral;
 }
 table {
     /* tabel에서만 사용한다. */
-    border-collapse: collapse;
-    text-align: center;
+    border-collapse: collapse;    
 }
+
+/* tr:nth-of-type(2n) {
+    background: yellow;
+} */
+
 td {
+    /* td와 th를 중복 적용하면 td로 적용된다. */
     width:100px;
-    height:100px;
+    height:50px;
+    /* 표의 셀: 가로(왼쪽) /td에도 사용 가능  */
+    text-align: center;/* 블록에, left: 기본값*/
+    /* 표의 셀: 세로(가운데) /td에만 사용 가능 */
+    vertical-align: middle;/* 인라인에 middle: 기본값 */
 }
 
 caption {
     margin-bottom: 10px;
 }
 
+col:nth-child(1){
+    background: lightblue;
+}
+
+col:nth-child(2) {
+    background: lightgray;
+}
+
 #table1 th, #table1 td {
     height:30px;
 }
-col:nth-of-type(1) {
-    background: yellow;
-}
+
 thead tr:nth-of-type(1) {
     background: lightgreen;
 }

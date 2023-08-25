@@ -28,22 +28,21 @@ li {
 }
 a {
     text-decoration-line: none;
+    color: #000;
 }
 li {
     list-style: none;
 }
 
-.clearfix::after {
-    content: '';
-    display: block;
-    clear: both;
-}
+
 /* 헤더 */
+
 
 .wrap {
     position: fixed;
     width: 100%;
     height: 100px;
+    z-index: 999;
     display: flex;
     justify-content: space-around;
     
