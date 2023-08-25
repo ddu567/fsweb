@@ -4,7 +4,8 @@
 html {font-size: 10px;}
 body {font: 1.5rem/1.8 'Noto Sans KR', sans-serif;}
 
-a {color: #111;}
+a {color: #111;
+text-decoration: none;}
 h1 {
     font-size: 2.4rem;
     letter-spacing: 10px;

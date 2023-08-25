@@ -2,6 +2,10 @@
 
 table, th, td {
     border:1px solid;
+
+}
+table {
+    /* tabel에서만 사용한다. */
     border-collapse: collapse;
     text-align: center;
 }

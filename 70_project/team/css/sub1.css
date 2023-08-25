@@ -27,7 +27,8 @@
     text-align: center;
 }
 
-.career, .recruit {
+.career,
+.recruit {
     text-align: center;
 }
 
@@ -39,6 +40,7 @@
 h2 span:nth-of-type(1) {
     color: #85C441;
 }
+
 h2 span:nth-of-type(2) {
     color: #009223;
 }
@@ -46,9 +48,18 @@ h2 span:nth-of-type(2) {
 
 
 /* 섹션 공통 */
-h2 {padding-top: 48px;}
-h3 {margin: 56px 0;}
-dd {margin:0;}
+h2 {
+    padding-top: 48px;
+}
+
+h3 {
+    margin: 56px 0;
+}
+
+dd {
+    margin: 0;
+}
+
 .h2ex {
     margin-bottom: 80px;
 }
@@ -58,7 +69,7 @@ dd {margin:0;}
 
 /* 섹션1 */
 #sec1 {
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 #sec1 ul {
@@ -67,41 +78,49 @@ dd {margin:0;}
     justify-content: space-between;
     margin: 0 auto;
     width: 1150px;
+    padding-bottom: 50px;
 
 }
+
 #sec1 li {
     width: 550px;
     height: 385px;
     background-image: 100%;
     padding: 24px;
-    
+
 }
+
 #sec1 li:nth-of-type(2)~li {
     margin-top: 40px;
 }
+
 #sec1 dt {
     text-align: center;
     vertical-align: middle;
     width: 400px;
     margin: 140px auto 0;
-    background: rgb(37, 37, 37, 0.6) ;
+    background: rgb(37, 37, 37, 0.6);
     border-radius: 30px;
 }
 
 /* 호버 전 */
 #sec1 li:nth-of-type(1) {
     background: url(../images/sub1/sub1_sec1_01.jpg);
-    
+
 }
+
 #sec1 li:nth-of-type(2) {
     background: url(../images/sub1/sub1_sec1_02.jpg);
 }
+
 #sec1 li:nth-of-type(3) {
     background: url(../images/sub1/sub1_sec1_03.jpg);
 }
+
 #sec1 li:nth-of-type(4) {
     background: url(../images/sub1/sub1_sec1_04.jpg);
 }
+
 #sec1 dd {
     opacity: 0;
     transition: .5s;
@@ -116,21 +135,31 @@ dd {margin:0;}
     transform: scale(1.1, 1.1);
     transition: .5s;
 }
+
 #sec1 li:nth-of-type(1):hover {
     background: url(../images/sub1/sub1_sec1_hover_01.jpg);
 }
+
 #sec1 li:nth-of-type(2):hover {
     background: url(../images/sub1/sub1_sec1_hover_02.jpg);
 }
+
 #sec1 li:nth-of-type(3):hover {
     background: url(../images/sub1/sub1_sec1_hover_03.jpg);
 }
+
 #sec1 li:nth-of-type(4):hover {
     background: url(../images/sub1/sub1_sec1_hover_04.jpg);
 }
 
+#sec1 li:hover dt {
+    background: none;
+    transition: .5s;
+}
+
 #sec1 li:hover dd {
     opacity: 1;
+    transition: .5s;
 }
 
 
@@ -140,7 +169,7 @@ dd {margin:0;}
 .now {
     height: 400px;
     background: url(../images/sub1/sub1_sec2_parallax.png) no-repeat center/cover fixed;
-    color:#fff;
+    color: #fff;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -169,10 +198,11 @@ dd {margin:0;}
 }
 
 /* Career Path */
-.career{ 
+.career {
     width: 1033px;
-    margin: 0 auto ;
+    margin: 0 auto;
 }
+
 .career ol {
     background: url(../images/sub1/sub1_sec2_careerbg.png) 0 7px no-repeat;
     height: 420px;
@@ -183,6 +213,7 @@ dd {margin:0;}
     position: relative;
     padding: 0 60px;
 }
+
 .career li {
     width: 260px;
     height: 103px;
@@ -197,12 +228,30 @@ dd {margin:0;}
     height: 22px;
     transform: translate(-11px, 0);
 }
-.career li:nth-of-type(1) {order: 0;}
-.career li:nth-of-type(2) {order: 0;}
-.career li:nth-of-type(3) {order: 0;}
-.career li:nth-of-type(4) {order: 2;}
-.career li:nth-of-type(5) {order: 1;}
-.career li:nth-of-type(6) {order: 0;}
+
+.career li:nth-of-type(1) {
+    order: 0;
+}
+
+.career li:nth-of-type(2) {
+    order: 0;
+}
+
+.career li:nth-of-type(3) {
+    order: 0;
+}
+
+.career li:nth-of-type(4) {
+    order: 2;
+}
+
+.career li:nth-of-type(5) {
+    order: 1;
+}
+
+.career li:nth-of-type(6) {
+    order: 0;
+}
 
 .career span {
     display: block;
@@ -221,46 +270,59 @@ dd {margin:0;}
     letter-spacing: -0.02em;
     margin-top: 1px;
 }
+
 .career span {
     display: block;
 }
 
 /* 호버 전 */
 #sec2 .hidden {
-    opacity:0;
+    opacity: 0;
     transition: .5s;
-    width:260px;
+    width: 260px;
     height: 24px;
 }
+
 /* 호버 후 */
 #sec2 li:hover .hidden {
     background-color: #009223;
     opacity: 1;
-    position: absolute;
-
 }
+
 
 
 /* 섹션3 */
 /* 아티스트 */
-.artist h2 span:nth-of-type(1){
+.artist h2 span:nth-of-type(1) {
     margin-bottom: 2px;
 }
 
+.slide {
+    height: 390px;    
+}
+
+.slide {
+    position: relative;
+}
 
 .slide li {
+    position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 200px;
+    padding: 0 300px;
+
 }
+
 .info {
     width: 400px;
     height: 120px;
 }
+
 .info strong {
     font-size: 2.2rem;
 }
+
 .info p {
     margin-top: 15px;
 }
@@ -268,12 +330,11 @@ dd {margin:0;}
 /* 채용 */
 .recruit {
     padding: 100px;
+
 }
 
-
-
 .recruit p {
-    margin-bottom: 10px;
+    margin-bottom: 50px;
 }
 
 .recruit ul {
@@ -286,17 +347,19 @@ dd {margin:0;}
 .recruit li a {
     display: block;
 }
+
 .heaven {
     background: url(../images/sub1/sub1_sec3_recruit_01.png) no-repeat;
     width: 150px;
     height: 150px;
-    
 }
+
 .mon {
     background: url(../images/sub1/sub1_sec3_recruit_02.png) no-repeat;
     width: 150px;
     height: 150px;
 }
+
 .home {
     background: url(../images/sub1/sub1_sec3_recruit_03.png) no-repeat;
     width: 150px;
@@ -305,13 +368,15 @@ dd {margin:0;}
 
 
 .recruit .anim:hover {
-    animation: move .15s steps(2) forwards; 
+    animation: move .15s steps(2) forwards;
 }
 
 @keyframes move {
-    0% {background-position: 0 0;}
-    100% {background-position: -300px 0;}
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -300px 0;
+    }
 }
-
-
-
