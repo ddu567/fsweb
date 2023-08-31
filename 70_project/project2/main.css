@@ -114,6 +114,7 @@ section h2 {
 
 /* 섹션3, 4의 공통 */
 section:first-of-type ~ section > p {
+    margin-top: 10px;
     margin-bottom: 40px;
 }
 
