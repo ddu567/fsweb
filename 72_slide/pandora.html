@@ -4,36 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>메가커피 캐러셀 - bxSlider</title>
+    <title>판도라 캐러셀 - bxSlider</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.css">
     <style>
         body {margin: 0;}
 
-        #section {
-            height: 100vh;
-        }
-
         .slideWrap {
-            height: 100%;
+            /* 이미지 하나가 348px */
+            width: 1044px;
+            margin: 0 auto;
+
         }
 
         .bx-wrapper {
             background: transparent;
             box-shadow: none;
             border: none;
-            height: 100%;
             overflow: hidden;
             margin-bottom: 0;
+            border: 1px solid red;
         }
 
         .bx-wrapper .bx-pager {
-            bottom: 48px;
+            bottom: 32px;
         }
 
         .bx-wrapper .bx-pager.bx-default-pager a {
             background: #666;
-            width: 30px;
-            height: 10px;
+            width: 5px;
+            height: 5px;
             margin: 0 5px;
             border-radius: 5px;
         }
@@ -41,8 +40,7 @@
         .bx-wrapper .bx-pager.bx-default-pager a:hover,
         .bx-wrapper .bx-pager.bx-default-pager a.active,
         .bx-wrapper .bx-pager.bx-default-pager a:focus {
-            background: #ccc;
-            width: 60px;
+            background: pink;
         }
         
         /* 
@@ -55,18 +53,6 @@
             background-position: x위치 y위치;
         */
 
-        .bx-controls-direction a {
-            width: 100px;
-            height:100px;
-            border: 1px solid red;
-        }
-
-        .bx-wrapper .bx-prev {
-            background: url(../70_project/team/images/sub1/sub1_sec3_slide_arr_left.png) no-repeat;
-        }
-        .bx-wrapper .bx-next    {
-            /* background: url(../70_project/team/images/sub1/sub1_sec3_slide_arr_right.png) no-repeat; */
-        }
     </style>
 </head>
 
@@ -75,9 +61,20 @@
         <div class="slideWrap">
             <div class="slider">
                 <!-- alt는 웹접근성으로 반드시 기록한다. -->
-                <div><img src="images/slide1.jpg" alt="이미지1"></div>
-                <div><img src="images/slide2.jpg" alt="이미지2"></div>
-                <div><img src="images/slide3.jpg" alt="이미지3"></div>
+                <div>
+                    <img src="images/762676C01.png" alt="이미지1">
+                    <p>투톤 셀레셀 트리플 댕글 참</p>
+                    <p>&#8361;138,000</p>
+                    <a href="#">제품보기</a>
+                </div>
+                <div><img src="images/791691C02.png" alt="이미지2"></div>
+                <div><img src="images/792680C01.png" alt="이미지3"></div>
+                <div><img src="images/792681C01.png" alt="이미지4"></div>
+                <div><img src="images/792687C01.png" alt="이미지5"></div>
+                <div><img src="images/792694C01.png" alt="이미지6"></div>
+                <div><img src="images/792695C01.png" alt="이미지7"></div>
+                <div><img src="images/792698C01.png" alt="이미지8"></div>
+                <div><img src="images/792703C01.png" alt="이미지9"></div>
             </div>
         </div>
     </div>
@@ -101,11 +98,10 @@
         // 요소.메서드(매개변수, ...)
         // $('선택자').bxSlider();
         $('.slider').bxSlider({
-            auto: true,
-            // autoControls: true,
-            stopAutoOnClick: true,
-            pager: true,
-            // slideWidth: 1200
+            slideWidth: 348,
+            minSlides: 3,
+            maxSlides: 3,
+            moveSlides: 3,
         });
     </script>
 
