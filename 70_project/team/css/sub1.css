@@ -4,9 +4,9 @@
 
 
 /* 작업중 */
-/* * {
-    outline: 1px solid red;
-} */
+* {
+    /* outline: 1px solid red; */
+}
 
 /* typo */
 #sec1 ul {
@@ -56,15 +56,15 @@ h2 span:nth-of-type(2) {
 
 /* scroll_bar */
 body::-webkit-scrollbar {
-    /* 스크롤바의 너비 */
     width: 12px;
+    /* 스크롤바의 너비 */
 }
 
 body::-webkit-scrollbar-thumb {
-    /* 스크롤바의 길이 */
     height: 30%;
-    /* 스크롤바의 색상 */
+    /* 스크롤바의 길이 */
     background: #008060;
+    /* 스크롤바의 색상 */
     border-radius: 10px;
 }
 
