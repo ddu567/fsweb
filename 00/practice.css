@@ -1,0 +1,73 @@
+.artist h2 span:nth-of-type(1) {
+    margin-bottom: 2px;
+}
+
+.artist {
+    width: 1500px;
+    margin: 0 auto;
+}
+
+.crs {
+    width: 1500px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.artist ul {
+    height: 390px;
+    width: 1200px;
+    position: relative;
+}
+
+.artist li {
+    width: 1200px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* 캐러셀 적용 후 제거 */
+    background-color: #fff;
+}
+
+.info {
+    width: 400px;
+    height: 120px;
+}
+
+
+
+/* 호버 전 */
+.btn_pr {
+    width: 100px;
+    height: 100px;
+    border: none;
+    background: url(assets/sub1_sec3_slide_arr_left.png) no-repeat;
+    /* left: 6%; */
+    /* transform: translate(20px, -250px); */
+    position: relative;
+}
+
+.btn_nx {
+    width: 100px;
+    height: 100px;
+    border: none;
+    background: url(assets/sub1_sec3_slide_arr_right.png) no-repeat;
+    position: relative;
+
+}
+
+/* 호버 후 */
+.btn_pr:hover {
+    width: 100px;
+    height: 100px;
+    background: url(assets/sub1_sec3_slide_arr_hover_left.png);
+}
+
+.btn_nx:hover {
+    width: 100px;
+    height: 100px;
+    background: url(assets/sub1_sec3_slide_arr_hover_right.png);
+}

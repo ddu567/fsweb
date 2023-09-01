@@ -2,6 +2,15 @@
 @import url(../css/reset.css);
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
+/* 변수 정의 */
+:root {
+    --c111: #111;
+    --c333: #333;
+    --c777: #777;
+    --cccc: #ccc;
+    --cfff: #fff;
+}
+
 /***************************************************** 
     typo.css: 크기, 색, 종류, 굵기, 줄간격, 자간 
 ******************************************************/
@@ -11,36 +20,41 @@
 */
 body {
     font: 1.5rem/1.8 'Noto Sans KR', sans-serif;
-    color: #333;
+    color: var(--c333);
 }
 
 /* a태그는 본문 태그와 별개로 설정해야 함. 기본값 #111 */
-a {color: #111;}
+a {
+    color: var(--c111);
+}
 
-.wtxt, button{
-    color: #fff;
+.wtxt,
+button {
+    color: var(--cfff);
 }
 
 .txt {
-    font-family: "Segoe UI",Arial,sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
     font-size: 3.6rem;
 }
 
-#gnb, .txt {
+#gnb,
+.txt {
     letter-spacing: 4px;
 }
 
 
-footer, ::placeholder {
-    color: #777;
+footer,
+::placeholder {
+    color: var(--c777);
 }
 
 
 /*******************************************************/
 
-/* 공통 */
+/* 전체 */
 body {
-    background: #fff;
+    background: var(--cfff);
 }
 
 /* 헤더 */
@@ -49,153 +63,242 @@ header {
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    /* fixed, absolute이면 width가 인라인처럼 된다. */
     width: 100%;
     height: 55px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.16);
-    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+    background-color: var(--cfff);
     z-index: 999;
     padding: 0 32px;
 }
+
 /* 로고 */
-.logo {padding-top: 16px;}
+.logo {
+    width: 40%;
+    /* padding-top: 24px; */
+}
 
 /* 내비게이션 */
-
-#gnb li {display: inline-block; margin-left: 32px;}
-
-
-/* 섹션 공통 */
-.sec {
-    position: relative;
-    width: 1500px;
-    margin: 0 auto;
-}
+#gnb {display: none;}
 
 /* 섹션1 */
 #sec1 {
     padding-top: 55px;
-    /* maring-top: 55px; */
-    /* transform: translateY(55px); */
-    /* top: 55px; */
 }
+
+.main_img {
+    position: relative;
+}
+
 .txt {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
+
 .tit1 {
     padding: 8px 16px;
-    background-color: #000;
+    background-color: var(--c111);
     opacity: .75;
 }
 
-/* 섹션2,3,4 공통 */
+.tit2 {
+    display: none;
+}
+
+/* 섹션 2, 3, 4 공통 */
+section{
+    padding: 0 30px;
+}
+
 section h2 {
     padding: 96px 0 20px 0;
     padding-bottom: 20px;
     border-bottom: 1px solid #f1f1f1;
-}
-
-/* 섹션2,3 공통 */
-.sec23 ul {
-    display: flex;
-    flex-wrap: wrap;
+    margin-bottom: 20px;
 
 }
+
+/* 섹션 2, 3 공통 */
 .sec23 li {
-    width: 360px;
-    height: 240px;
-    margin-right: 20px;
-}
-.sec23 li:nth-of-type(4n) {
-    margin-right: 0;
-}
-
-/* 섹션3, 4의 공통 */
-section:first-of-type ~ section > p {
-    margin-top: 10px;
-    margin-bottom: 40px;
+    width: auto;
+    height: auto;
 }
 
 /* 섹션2 */
-/* id > class, 가상 클래스(:), 속성 > 요소, 가상요소(::) */
 #sec2 h2 {
     margin-bottom: 40px;
 }
-
 #sec2 li {
     position: relative;
 }
 
-#sec2 li:nth-of-type(4) ~ li {
-    margin-top: 20px;
+/* 
+    #sec2 li:first-of-type ~ li 
+    첫 번째 요소를 제외한 아래 모든 형제 요소
+*/
+#sec2 li + li {
+    margin-top: 16px;
 }
 
-
-#sec2 span{
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: #111;
-    padding: 8px 16px;
+/* 섹션3, 4의 공통 */
+section:first-of-type~section>p {
+    margin-bottom: 40px;
 }
 
 /* 섹션3 */
-/* 버튼 */
-#sec3 a {
-    display: block;
-    background-color: #ccc;
-    text-align: center;
-    /* line-height: 40px; */
-    padding: 8px 0;
+#sec3 li + li {
+    margin-top: 32px;
 }
-
-#sec3 li {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 510px;
-    max-height: 510px;
-}
-
-#sec3 h3 {
+#sec3 li h3 {
     margin: 16px 0;
 }
 
-#sec3 li p:first-of-type{
-    margin-bottom: 16px; 
+#sec3 li p:first-of-type {
+    margin-bottom: 16px;
 }
 
+/* 버튼 */
+#sec3 a {
+    display: block;
+    background-color: #f0f0f0;
+    text-align: center;
+    /* line-height: 40px; */
+    padding: 8px 0;
+    margin-top: 20px;
+}
+
+#sec3 a:hover {
+    background: var(--cccc);
+}
 
 /* 섹션4 */
 #sec4 {
+    /* 지도 아래 여백 */
     padding-bottom: 8px;
 }
+
 #sec4 input {
-    display: block;
+    /* display: block; */
     width: 100%;
     padding: 12px 16px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
+    margin-bottom: 16px;
+    border: 1px solid var(--cccc);
 }
 
 #sec4 button {
     margin: 16px 0 48px 0;
     padding: 10px 30px;
-    background: #000;
+    background: var(--c111);
 }
 
 .map {
-    height: 845px;
+    height: 184px;
 }
 
 /* 푸터 */
 footer {
     /* 한 줄 텍스트일 때 박스의 수직 중앙 정렬 */
     /* line-height: 84px; */
-    background: #333;
-    color: #777;
+    background: var(--c333);
     text-align: center;
-    padding: 30px 0;
+    padding: 32px 0;
 }
+
+
+/* 992px 이상 */
+@media (min-width: 992px) {
+
+
+    /* 헤더 */
+    /* 로고 */
+    .logo {
+        padding-top: 16px;
+    }
+
+    /* 내비게이션 */
+
+    #gnb li {
+        display: inline-block;
+        margin-left: 32px;
+    }
+
+
+    /* 섹션 공통 */
+    .sec {
+        position: relative;
+        width: 1500px;
+        margin: 0 auto;
+    }
+
+    /* 섹션1 */
+    
+
+    /* 섹션2,3,4 공통 */
+    section{
+        padding: 0;
+    }
+    
+
+    /* 섹션2,3 공통 */
+    .sec23 ul {
+        /* 이미지 가로 배치 */
+        display: flex;
+        /* 줄바꿈 */
+        flex-wrap: wrap;
+    }
+
+    .sec23 li {
+        width: 360px;
+        height: 240px;
+        margin-right: 20px;
+    }
+
+    .sec23 li:nth-of-type(4n) {
+        margin-right: 0;
+    }
+
+
+
+    /* 섹션2 */
+    /* id > class, 가상 클래스(:), 속성 > 요소, 가상요소(::) */
+
+
+    /* 8개 이미지 중  5번째 이미지부터 4개만 위쪽 여백 지정 */
+    #sec2 li:nth-of-type(4)~li {
+        margin-top: 20px;
+    }
+
+
+    #sec2 span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: var(--c111);
+        padding: 8px 16px;
+    }
+
+    /* 섹션3 */
+    #sec3 li {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 510px;
+        max-height: 510px;
+    }
+
+    /* 섹션4 */
+    #sec4 input {
+        display: block;
+    }
+
+    .map {
+        height: 845px;
+    }
+
+    /* 푸터 */
+
+
+} /* @media 992px 이상 */
+

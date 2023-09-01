@@ -54,6 +54,17 @@
             c = b -> ${c}
         `);
 
+        // 산술, 단항: ++, --
+        // a = 5, b = 3
+        document.write(`
+            <h2>++, --</h2>
+            ++는 1씩 증가<br>
+            --는 1씩 감소<br>
+            a = b++;일 때 a는 ${a=b++}, b는 ${b} <br>
+            a = ++b;일 때 a는 ${a=++b}, b는 ${b} <br>
+            
+        `);
+
         // 표현식? 값이 출력되는 문장
         document.write <(`
             <h2>typeof</h2>
@@ -83,6 +94,21 @@
             c /= b, c는 -&gt;${c /= b}<br> 
             c %= b, c는 -&gt;${c %= b}<br> 
             c **= b , c는 -&gt;${c **= b}<br>
+        `); 
+        document.write(`
+            <h2>비교 연산자</h2>
+            비교연산의 결과는 true 아니면 flase이다. <br>
+            a = ${a}, b = ${b='5'}<br>
+            
+            a > b는 ${a > b}<br>
+            a < b는 ${a < b}<br>
+            a >= b는 ${a >= b}<br>
+            a <= b는${a <= b}<br>
+
+            a == b는a == b는${a == b}<br>
+            a === b는a === b는 ${a === b}<br>
+            a != b는${a != b}<br>
+            a ==! b는${a !== b}<br>
         `); 
     </script>
 </body>
