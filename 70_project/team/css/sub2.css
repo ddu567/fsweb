@@ -67,7 +67,8 @@ button{
     background-color: transparent;
     color:#FFF;
     font-size: 35px;
-    cursor: pointer; }
+    cursor: pointer; 
+}
 
 .prev{position: absolute; top:130px; left: 300px;}    
 .next{position: absolute; top:130px; right: 300px;}    
