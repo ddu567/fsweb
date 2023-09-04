@@ -11,19 +11,19 @@
 <body>
     <h1>함수</h1>
     <p>여기에 출력</p>
-    <p>여기에 출력</p>
-    <p>여기에 출력</p>
 
     <script>
         /* 
+            1. 매개변수(매개값)
+
             함수 정의
 
-            선언적 함수
+            선언적 함수: 이름 있는 함수, 호이스팅(Hoisting)
             function 함수명() {
                 코드;
             }
 
-            익명 함수
+            익명 함수: 이름 없는 함수
             var 참조변수 = function () {
                 코드;
             }
@@ -34,8 +34,8 @@
             }
 
             함수 호출
-            함수명();
-            참조변수();           
+            함수(매개값);
+            참조변수();
         */
 
         // 1부터 5까지 화면에 출력
@@ -64,21 +64,24 @@
         pTag[2].innerHTML += '4<br>';
         pTag[2].innerHTML += '5<br>';
         */
+        
+        /*
+        function fn() {
+            document.write(1, '<br>');
+            document.write(2, '<br>');
+            document.write(3, '<br>');
+        }
+        */
 
-        /* function fn() {
-            document.write(1, '<br>');
-            document.write(2, '<br>');
-            document.write(3, '<br>');
+        /*
+        var fn = function () {
             document.write(4, '<br>');
             document.write(5, '<br>');
-        } */
-        /* var fn = function () {
-            document.write(1, '<br>');
-            document.write(2, '<br>');
-            document.write(3, '<br>');
-            document.write(4, '<br>');
-            document.write(5, '<br>');
-        } */
+            document.write(6, '<br>');
+        }
+        */
+
+
 
         /* 
             제어문
@@ -124,7 +127,7 @@
             // 6 < 6 => F
             // for 문 탈출
             for (var i=1; i<6; i++) {
-                pTag[0].innerHTML += '<br>' +i
+                pTag[0].innerHTML += '<br>' + i
             }
         }
 

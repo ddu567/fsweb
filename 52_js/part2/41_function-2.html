@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>함수</h1>
+    <p>함수1 출력</p>
+    <p>함수2 출력</p>
+    <p>함수3 출력</p>
+    <p>함수4 출력</p>
+    <p>함수5 출력</p>
+    <p>함수6 출력</p>
+    <p>함수6의 return값 출력</p>
+
+    <script>
+
+        /* 
+        1. 매개변수(매개값)
+        2. 리턴(return) - 값을 되돌려 주거나, 함수 종료
+        3. 스코프(scope, 영역) - 변수, 함수
+
+        문(statement)
+            1. 표현식(expression): 결과 값이 있는 문장;
+            2. 함수문, 제어문(if, for): 결과 값이 없는 문장;
+
+        함수 정의
+        
+        선언적 함수: 이름 있는 함수, 호이스팅(Hoisting)
+            function 함수([parameter][,매개변수][, ...]) {
+                코드;
+                return [표현식];
+            }
+        */
+        // 요소 선택
+        var pTags = document.querySelectorAll('p')
+
+        // HTML 내용 변경
+        pTags[0].innerHTML = '200000';
+
+
+        /* 
+            document: 내장 객체
+            alert(): 내장 함수
+            document.getElementById('아이디') (#아이디 x)
+            document.getElementsByClassName('클래스') (.클래스 x)
+            document.getElementsByTagName
+
+            document.querySelector
+            document.querySelectorAll
+        */
+        
+       // HTML의 내용: innerHTML, innerText 속성
+       // 요소.innerHTML = '값';
+        // HTML의 속성
+        // 요소.HTML속성 = 값;
+        // CSS의 속성
+        // 요소.style.CSS속성 = 값;
+
+        // 익명함수
+        var fn1 = function (para1, para2, para3) {
+            // HTML 내용 변경
+            // innerHTML의 경우 줄바꿈 하려면 <br> 사용
+            // innerText의 경우 Enter키 사용한 만큼 줄바꿈
+            pTags[0].innerHTML = `fn1의 결과<br>
+                para1 + para2 = ${para1 + para2}<br>
+                para2 + para3 = ${para2 + para3}`;
+            // CSS 속성 변경
+            pTags[0].style.color = 'purple';
+        }
+        
+        // 익명 함수는 화살표 함수로 변경 가능
+        // 화살표 함수
+        var fn2 = (para1, para2, para3) => {
+            // HTML 내용 변경
+            pTags[1].innerText = `fn2의 결과
+                para1 + para2 = ${para1 + para2}
+                para2 + para3 = ${para2 + para3}`;
+            // CSS 속성 변경
+            pTags[1].style.color = 'purple';}
+        
+            // 매개변수가 1개일 경우 () 생략
+        var fn3 = para1 => {
+            pTags[2].innerHTML = `fn3의 결과<br>
+                para1 = ${para1}<br>
+                para1 + para1 = ${para1 + para1}`;
+            
+                // 함수 종료
+            return;
+        }
+
+
+        // 명령문이 1개일 경우 {} 생략
+        var fn4 = para1 => 
+            pTags[3].innerHTML = `fn4의 결과<br>
+                para1 = ${para1}`;
+        
+        // 매개변수가 없으면 () 생략 불가
+        var fn5 = () => pTags[4].innerHTML = `fn5의 결과<br>
+            10`;
+
+        // 선언적 함수
+        function fn6(a, b, c) {
+            pTags[5].innerHTML = `fn6의 결과<br>
+                a + b + c = ${a + b + c}<br>`;
+                return a - b - c;
+        }
+
+        // 익명 함수
+        fn1(20 ,30, 50);
+
+        // 화살표 함수
+        fn2(20 ,30, 50);
+        fn3(20);
+        fn4(20);
+        fn5();
+
+        // 선언적 함수
+        var refVar = fn6(20 ,30, 50);
+        pTags[6].innerHTML = `fn6의 return 값<br>
+                refVar = ${refVar}`;
+
+    </script>
+    
+</body>
+
+</html>
