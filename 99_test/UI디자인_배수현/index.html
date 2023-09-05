@@ -10,19 +10,21 @@
 
 <body>
     <!-- 헤더 -->
-    <header class="clearfix">
+    <header>
         <!-- 로고 -->
-        <h1 class="logo">
-            <a href="#"><img src="images/logo.svg" alt="로고"></a>
-        </h1>
-        <!-- 내비게이션 -->
-        <nav id="gnb">
-            <ul>
-                <li><a href="#sec2">Best Product</a></li>
-                <li><a href="#sec3">New Arrivals</a></li>
-                <li><a href="#sec4">INQUIRY</a></li>
-            </ul>
-        </nav>
+        <div class="wrap">
+            <h1 class="logo">
+                <a href="#"><img src="images/logo.svg" alt="로고"></a>
+            </h1>
+            <!-- 내비게이션 -->
+            <nav id="gnb">
+                <ul>
+                    <li><a href="#sec2">Best Product</a></li>
+                    <li><a href="#sec3">New Arrivals</a></li>
+                    <li><a href="#sec4">INQUIRY</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <div class="container">
@@ -38,7 +40,7 @@
         <!-- 섹션2 -->
         <section id="sec2" class="sec sec23">
             <h2>Best Product</h2>
-            <ul class="clearfix">
+            <ul>
                 <li><img src="images/bp_01_bp153.png" alt="볼펜"><span>펜</span></li>
                 <li><img src="images/bp_02_neof.png" alt="만년필"><span>펜</span></li>
                 <li><img src="images/bp_03_livecolor.png" alt="사인펜"><span>마카</span></li>
@@ -53,12 +55,12 @@
         <!-- 섹션3 -->
         <section id="sec3" class="sec sec23">
             <h2>New Arrivals</h2>
-            <ul class="clearfix">
+            <ul>
                 <li>
                     <img src="images/na_01_note.png" alt="노트">
                     <h3>지퀀스</h3>
                     <p>14,000원</p>
-                    <ul class="ex">
+                    <ul>
                         <li>360도 롤업(Roll-Up) 기능으로 간편한 휴대, 180도로 펼쳐도 뜯어짐 없는 사용</li>
                         <li>부드러운 소프트 노트 커버과 안정성과 편리성을 고려한 곡선처리 디자인</li>
                         <li>친환경 에코 잉크를 사용한 프리미엄 무독성 내지</li>
@@ -69,7 +71,7 @@
                     <img src="images/na_02_fountainpen.png" alt="만년필">
                     <h3>153 아이디 만년필</h3>
                     <p>65,000원</p>
-                    <ul class="ex">
+                    <ul>
                         <li>153ID 시그니처 느낌을 강조한 슬림하고 심플한 디자인의 EF촉 만년필</li>
                         <li>필기 시 뒤로 쏠리는 현상을 최소화한 저중심 무게구조 적용</li>
                         <li>금속 재질의 캡과 배럴로 고급스러움 강조한 디자인</li>
@@ -80,7 +82,7 @@
                     <img src="images/na_03_sharp.png" alt="샤프">
                     <h3>그리픽스 팝 샤프</h3>
                     <p>4,000원</p>
-                    <ul class="ex">
+                    <ul>
                         <li>필기 시 뒤로 쏠리는 현상을 최소화한 저중심 무게구조 적용</li>
                         <li>지류, 포켓 등에 꽂아 이동 및 사용 가능한 클립</li>
                         <li>길이 조절이 가능한 회전식 재우개</li>
@@ -91,7 +93,7 @@
                     <img src="images/na_04_highlighter.png" alt="형광펜">
                     <h3>그랑데 형광펜 604</h3>
                     <p>1,000원</p>
-                    <ul class="ex">
+                    <ul>
                         <li> 부드러운 파스텔 색상과 대용량로 장시간 이용 가능</li>
                         <li>빠른 건조효과로 번짐없는 사용 경험</li>
                         <li>곡선형 바디로 편안한 그립감</li>
@@ -99,6 +101,7 @@
                     </ul>
                     <button>구매하기</button>
                 </li>
+            </ul>
         </section><!-- //#sec3 -->
 
         <!-- 섹션4 -->
@@ -108,10 +111,10 @@
                 <p>문의 사항이 있으실 경우 이메일 문의 서비스를 이용해주세요. 감사합니다.</p>
                 <form action="qna.jsp">
                     <select name="qna">
-                        <option vlaue="normal">제품문의 (대량구매 포함)</option>
-                        <option vlaue="suggestion">제안사항 (콜라보레이션 포함)</option>
-                        <option vlaue="etcq">기타문의</option>
-                        <option vlaue="industrialq">산업용제품문의</option>
+                        <option value="normal">제품문의 (대량구매 포함)</option>
+                        <option value="suggestion">제안사항 (콜라보레이션 포함)</option>
+                        <option value="etcq">기타문의</option>
+                        <option value="industrialq">산업용제품문의</option>
                     </select>
                     <input type="text" placeholder="이름">
                     <input type="email" placeholder="이메일">
