@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            font-size: 40px;
+            color: #fff;
+        }
+
+        .box1 {
+            background: red;
+        }
+
+        .box2 {
+            background: blue;
+        }
+
+        .box3 {
+            background: rgb(94, 94, 31);
+        }
+
+        p {
+            position: fixed;
+            right: 0;
+            font-size: 30px;
+        }
+    </style>
+    <script>
+        // window.addEventListener('DOMContentLoaded', loadFn);
+        window.addEventListener('load', loadFn);
+
+        // 전역 함수 Global Function
+        function loadFn() {
+            box3.addEventListener('click', function(){
+                txt.innerText = '박스3을 클릭했습니다.';
+        });
+
+    box2.onclick = ev2;
+
+    }// loadfunction
+    </script>
+</head>
+
+<body>
+    <p>여기에 출력~</p>
+    <!-- 인라인 스크립트: HTML 이벤트 속성으로 지정 -->
+    <div class="box1" onclick="ev1();">박스1</div>
+    <div class="box2">박스2</div>
+    <div class="box3">박스3</div>
+
+    <script>
+        
+        /* function qs(sel) {
+            return document.querySelector(sel);
+        } */
+
+        /* const qs = function (sel){
+            return document.querySelector(sel);
+        }; */
+        const qs = sel => document.querySelector(sel);
+
+        const box1 = qs('.box1')
+        const box2 = qs('.box2');
+        const box3 = qs('.box3');
+        const txt = qs('p')
+
+        box1.onmouseenter = ev4;
+        box1.onmouseleave = ev5;
+        box2.onclick = ev2;
+
+        function ev1() {
+                txt.innerText = '박스1을 클릭했습니다.';
+            }
+            
+        function ev2() {
+                txt.innerText = '박스2을 클릭했습니다.';
+            }
+            
+        function ev4() {
+                txt.innerText = '박스1에 들어갔습니다.';
+                box1.style.background = 'navy';
+            }
+
+        function ev5() {
+                txt.innerText = '박스1에서 나갔습니다.';
+                box1.style.background = 'red';
+            }
+
+        /*
+            요소.addEventListener(이벤트, 함수);        
+        */
+    </script>
+</body>
+
+</html>
