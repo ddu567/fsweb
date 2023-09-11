@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            font-size: 40px;
+            color: #fff;
+        }
+
+        .box1 {
+            background: red;
+        }
+
+        .box2 {
+            background: blue;
+        }
+
+        .box3 {
+            background: rgb(94, 94, 31);
+        }
+
+        p {
+            position: fixed;
+            right: 0;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>여기에 출력~</p>
+    <!-- 인라인 스크립트: HTML 이벤트 속성으로 지정 -->
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+
+    <script>
+
+        /* const qs = sel => document.querySelector(sel);
+        
+            const box1 = qs('.box1')
+            const box2 = qs('.box2');
+            const box3 = qs('.box3');
+            const txt = qs('p')
+        
+         */
+        // if 제어문을 이용하여 하나의 함수로
+
+        const txt = document.querySelector('p');
+
+        const boxArr = document.querySelectorAll(".box");
+        // console.log(boxArr[1]);
+        // length ~ 객체{속성:값.속성:값;} 배열[1,2,3], 컬렉션(Nodelist), 문자열의 총 개수
+        // for (let 변수 of  배열\컬렉션\문자열) {코드}
+        // for (let i of boxArr) {코드}
+        const cnt = boxArr.length;
+        for (i = 0; i < cnt; i++) {
+            boxArr[i].addEventListener("click", (e) => {
+                // this, target, currentTarget
+                tar = e.target; /* e.target는 클릭한 대상 */
+                if (tar === boxArr[0]) {
+                    txt.innerText = `box1 click`;
+                } else if (tar === boxArr[1]) {
+                    txt.innerText = `box2 click`;
+                } else {
+                    txt.innerText = "box3 click";
+                }
+                // console.log(tar);
+            })
+        }
+    </script>
+</body>
+
+</html>
