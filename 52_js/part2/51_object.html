@@ -6,10 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+JS</title>
+    <style>
+        img {
+            width: 500px;
+        }
+    </style>
 </head>
 
 <body>
     <h1>객체</h1>
+    <div></div>
     <script>
         /* 
             현실 세계
@@ -39,7 +45,36 @@
         // 객체 생성 시 new 키워드와 생성함수를 사용한다.
         // 참조변수(인스턴스명) = new 생성함수()
 
+        const box = document.querySelector('div')
 
+        /*
+        let photo = `<img src="/assets/images/italy1.jpg" alt="이탈리아1">`;
+        let tit1 =  '메인 타이틀입니다.';
+        let tit2 =  '서브 타이틀입니다.';
+        let btn =  `<button>자세히 보기</button>`;
+        */
+
+        const obj0 = {
+            photo: `<img src="/assets/images/italy1.jpg" alt="이탈리아1">`,
+            tit1: '메인 타이틀입니다.',
+            tit2: '서브 타이틀입니다.',
+            btn: `<button>자세히 보기1</button>`
+        };
+
+        const obj1 = {
+            'photo image': `<img src="/assets/images/italy2.jpg" alt="이탈리아2">`,
+            'tit1': '메인 타이틀입니다.',
+            'tit2': '서브 타이틀입니다.',
+            'btn': `<button>자세히 보기2</button>`
+        };
+
+
+        // 객체.속성
+        box.innerHTML = obj0.photo + '<br>';
+        box.innerHTML = obj0.'photo image' + '<br>';
+        // 객체['속성']
+        box.innerHTML = obj0['photo'] + '<br>';
+        box.innerHTML = obj0['photo image'] + '<br>';
     </script>
 </body>
 
