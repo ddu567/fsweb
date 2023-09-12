@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+    <style>
+        img {width:300px;}
+    </style>
+</head>
+
+<body>
+    <h1>객체</h1>
+    <div></div>
+    <script>
+        /* 
+            객체?
+            현실세계:
+                사람        object(객체)
+                특징        property(속성)
+                동작        method(메서드)
+
+            객체는 속성과 메서드(function을 가진 속성)를 가지고 있다.
+            객체의 값은 숫자, 문자열, 불, 객체, ...
+
+            객체 선언
+            const obj = {
+                이름: 값,
+                lastname: 값,
+                'first name': function(){}
+                ...
+            };
+
+            객체 사용
+                객체['속성']
+                객체.속성
+            
+            var 변수 = 값;
+            var 함수 = function(){값};
+            var 배열 = {값, 값, 값, ...};
+            var 객체 = {변수1:값, 변수2:값, ...};
+
+
+            객체.메서드() -> 객체의 메서드를 실행한다.
+            객체.속성 -> 객체의 속성값을 가져온다.
+            객체.속성 = 값 -> 객체의 속성값을 바꾼다.
+        */
+
+        const box = document.querySelector('div')
+
+    // 객체 생성(선언)
+    const person = {
+        'first name': '길동',
+        lastName: '홍',
+        age: 20,
+        gender: '남',
+        name: function(){
+            return person.lastName + person['first name'];
+        }
+    };
+
+
+    // 객체 호출(사용): 객체의 값을 가져오기
+    // 방법1: 객체.속성
+    // person.gender;
+
+    // 방법2: 객체['속성']
+    // person['age']
+
+    // 속성의 이름에 공백이 있을 경우
+    // [] 안에 속성은 문자열로 표기
+    // person['first name']
+
+    // 객체의 값을 수정하기
+    // 객체.속성 = 값;
+    person.lastName = "김";
+    console.log(person.lastname)
+
+    // 객체의 메서드를 실행
+    // 객체.메서드()
+    person.name();
+    
+    // 출력
+    box.innerText = `
+        나의 이름은 ${person.name()}입니다.
+        나이는 ${person['age']}세이고요
+        성별은 ${person.gender}자입니다.
+    `;
+    </script>
+</body>
+
+</html

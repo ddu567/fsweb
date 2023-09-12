@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+    <style>
+        img {width:300px;}
+    </style>
+</head>
+
+<body>
+    <h1>객체</h1>
+    <div></div>
+    <script>
+        /* 
+            객체는 속성과 메서드(function을 가진 속성)를 가지고 있다.
+
+            객체 선언
+            const 객체 = {
+                속성: 값,
+                속성:메서드: function(){},
+                키: 키값,
+                lastname: 값,
+                'last name':function(){}, -> 사용 x
+                'first name': function(){}
+                ...
+            };
+
+            객체 사용
+                객체['속성']
+                객체.속성
+            
+            var 변수 = 값;
+            var 함수 = function(){값};
+            var 배열 = {값, 값, 값, ...};
+            var 객체 = {변수1:값, 변수2:값, ...};
+
+
+            객체.메서드() -> 객체의 메서드를 실행한다.
+            객체.속성 -> 객체의 속성값을 가져온다.
+            객체.속성 = 값 -> 객체의 속성값을 바꾼다.
+
+            객체의 종류
+            1. 내장 객체(Built-in Object)
+                - 자바스크립트 엔진에 내장되어 있는 객체
+                - Date, Array, Math, String 등
+            2. 브라우저 객체 모델(BOM, Browser Object Model)
+                - 브라우저에 계층 구조로 내장되어 있는 객체
+                - window, document, screen, location, history, navigator 등
+                - 문서 객체 모델(DOM, Document Object Model)
+                - HTML 문서 구조
+        */
+
+        const box = document.querySelector('div');
+
+        /* let photo = `<img src="/assets/images/italy1.jpg" alt="이탈리아">`;
+        let tit1 = '메인 타이틀입니다.';
+        let tit2 = '서브 타이틀입니다.';
+        let btn = `<button>자세히 보기</button>`;
+        box.innerHTML = `
+            ${photo}<br>
+            ${tit1}<br>
+            ${tit2}<br>
+            ${btn}<br>
+        `; */
+
+        const obj0 = {
+            photo: `<img src="/assets/images/italy1.jpg" alt="이탈리아">`,
+            tit1: '메인 타이틀1입니다.',
+            tit2: '서브 타이틀1입니다.',
+            btn: `<button>자세히 보기1</button>`
+        };
+        const obj1 = {
+            'photo image': `<img src="/assets/images/italy2.jpg" alt="이탈리아">`,
+            'tit1': '메인 타이틀2입니다.',
+            'tit2': '서브 타이틀2입니다.',
+            'btn': `<button>자세히 보기2</button>`
+        };
+
+        // 객체.속성
+        box.innerHTML = obj0.photo + '<br>';
+        // 객체['속성']
+        box.innerHTML += obj0['photo'] + '<br>';
+        box.innerHTML += obj1['photo image'] + '<br>';
+
+    </script>
+</body>
+
+</html>
