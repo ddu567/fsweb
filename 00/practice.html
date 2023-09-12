@@ -1,89 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/assets/css/reset.css">
-    <style>
-        /* typo */
-        .main a {
-            font-size: 1.8rem;
-            color: #333;
-        }
-
-        .sub a {
-            font-size: 1.4rem;
-            color: #595959;
-        }
-
-        .main {
-            display: flex;
-        }
-
-        .main > li {
-            padding: 0 8px;
-        }
-        
-        .main > li > a {
-            background: #54a4ff;
-            padding: 4px 12px;
-        }
-
-        .sub {
-            background: #cae1fc;
-        }
-
-    </style>
+    <link rel="stylesheet" href="practice.css">
 </head>
-
 <body>
-    <!-- #nav>ul.main>li*4>a{메인메뉴$}+ul.sub>li*4>a{서브메뉴$} -->
-    <div id="nav">
-        <ul class="main">
-            <li>
-                <a href="#">메인메뉴1
-                    <ul class="sub">
-                        <li><a href="#">서브메뉴1</a></li>
-                        <li><a href="#">서브메뉴2</a></li>
-                        <li><a href="#">서브메뉴3</a></li>
-                        <li><a href="#">서브메뉴4</a></li>
-                    </ul>
-                </a>
-            </li>
-            <li>
-                <a href="#">메인메뉴2
-                    <ul class="sub">
-                        <li><a href="#">서브메뉴1</a></li>
-                        <li><a href="#">서브메뉴2</a></li>
-                        <li><a href="#">서브메뉴3</a></li>
-                        <li><a href="#">서브메뉴4</a></li>
-                    </ul>
-                </a>
-            </li>
-            <li>
-                <a href="#">메인메뉴3
-                    <ul class="sub">
-                        <li><a href="#">서브메뉴1</a></li>
-                        <li><a href="#">서브메뉴2</a></li>
-                        <li><a href="#">서브메뉴3</a></li>
-                        <li><a href="#">서브메뉴4</a></li>
-                    </ul>
-                </a>
-            </li>
-            <li>
-                <a href="#">메인메뉴4
-                    <ul class="sub">
-                        <li><a href="#">서브메뉴1</a></li>
-                        <li><a href="#">서브메뉴2</a></li>
-                        <li><a href="#">서브메뉴3</a></li>
-                        <li><a href="#">서브메뉴4</a></li>
-                    </ul>
-                </a>
-            </li>
-        </ul>
-    </div>
-</body>
+    <header id="header">
+        <h1 class="logo"><a href="#"><img src="/assets/images/header_logo.png" alt="honorsville"></a></h1>
+        <div class="inner">
+            <nav id="gnb">
+                <ul class="main">
+                    <li>
+                        <a href="#">분양단지</a>
+                        <ul class="sub">
+                            <li><a href="#">분양중인 단지</a></li>
+                            <li><a href="#">분양예정 단지</a></li>
+                            <li><a href="#">분양완료 단지</a></li>
+                            <li><a href="#">연간분양계획</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">브랜드</a>
+                        <ul class="sub">
+                            <li><a href="#">브랜드 스토리</a></li>
+                            <li><a href="#">브랜드 아이덴티티</a></li>
+                            <li><a href="#">특화아이템</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">아너스빌 멤버스</a>
+                        <ul class="sub">
+                            <li><a href="#">아너스빌 소식</a></li>
+                            <li><a href="#">청약가이드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">마이 아너스빌</a>
+                        <ul class="sub">
+                            <li><a href="#">자주 묻는 질문</a></li>
+                            <li><a href="#">1:1 문의</a></li>
+                            <li><a href="#">A/S 문의</a></li>
+                            <li><a href="#">관심단지 관리</a></li>
+                            <li><a href="#">개인정보 변경</a></li>
+                        </ul>
+                    </li>
+                </ul><!-- //.main -->
+            </nav><!-- //#gnb -->
+        </div><!-- //.inner -->
+
+        <!-- util -->
+        <div class="util">
+            <div class="sns"><a href="#">SNS</a></div>
+            <ul class="member">
+                <li><a href="#"></a>로그인</li>
+                <li><a href="#"></a>회원가입</li>
+            </ul>
+        </div>
+    </header><!-- #header -->
+
+    <section>
+        <!-- video -->
+        <div class="video">
+            <video autoplay loop>
+                <source src="/assets/video/main_video1.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
 
 </html>

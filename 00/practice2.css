@@ -1,0 +1,147 @@
+@charset "utf-8";
+@import url(/assets/css/reset.css);
+
+/* typo */
+.main > li > a,
+.util .sns a{
+    color: #eee;
+    font-size: 1.8rem;
+}
+
+.main > li > a:hover {
+    color: #aaa;
+}
+
+.sub > li > a {
+    font-size: 1.4rem;
+    color: #323232;
+}
+
+.sub > li > a:hover {
+    color: #bbb;
+}
+
+header:hover .util a {
+    color: #aaa;
+}
+
+.util .member a {
+    color: #eee;
+    font-size: 1.4rem;
+}
+
+body {
+    height: 2000px;
+}
+
+/* header */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    padding: 0 50px;
+}
+
+#header:hover{
+    background: #0F2244;
+    transition: .5s;
+}
+
+#header::after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    left: 0;
+    top: 95px;
+    width: 100%;
+    height: 0;
+    transition: .5s;
+}
+
+#header:hover::after {
+    height: 200px;
+}
+
+/* logo */
+.logo {
+    width: 207px;
+    
+}
+
+.inner {
+    height: 95px;
+}
+
+/* nav */
+#gnb {
+    position: relative;
+    z-index: 9999;
+    height: 95px;
+    overflow: hidden;
+    transition: .5s; /* 글씨 */
+}
+
+/* 글씨 보이게 */
+#header:hover #gnb {
+    height: 295px;
+}
+
+/* 1depth */
+#gnb .main {
+    display: flex;
+}    
+
+#gnb .main > li {
+    line-height: 95px;
+    padding: 4px 12px;
+}
+
+#gnb .main > li > a {
+    position: relative;
+}
+
+#gnb .main > li > a::after {
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 2px;
+    background-color: #aaa;
+    transition: .4s;
+    transform: scaleX(0)
+}
+
+#gnb .main li > a:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* 2depth */
+.sub li {
+    line-height: 1.8;
+    margin:8px 12px;
+    display: block;
+}
+
+.sub a {
+    display: block;
+} 
+
+/* util */
+.util {
+    display: flex;
+    align-items: center;
+}
+
+.member {
+    padding: 0 12px;
+    display: flex;
+}
+.member li {
+    padding: 0 8px;
+}
