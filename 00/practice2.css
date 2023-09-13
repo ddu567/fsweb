@@ -72,11 +72,12 @@ body {
     
 }
 
+/* nav */
+
 .inner {
     height: 95px;
 }
 
-/* nav */
 #gnb {
     position: relative;
     z-index: 9999;
@@ -104,6 +105,7 @@ body {
     position: relative;
 }
 
+/* 1depth 효과 */
 #gnb .main > li > a::after {
     content:'';
     position: absolute;

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>몬스터 커피_배수현</title>
+    <link rel="icon" href="images/favicon.ico">
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* typo */
+        @font-face {
+            font-family: 'NEXON Lv2 Gothic';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        body,
+        button {
+            font: 1.5rem/1.6 'NEXON Lv2 Gothic', "sans-serif";
+        }
+
+        #gnb .main>li>a {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        #gnb .sub>li>a {
+            font-size: 1.6rem;
+            color: #333;
+        }
+
+        #header:hover #gnb .main>li>a,
+        #header:hover .util a,
+        #header:hover .util span,
+        footer,
+        #prevBtn,
+        #nextBtn {
+            color: #eee;
+        }
+
+        #gnb .sub>li>a:hover,
+        #header .util a:hover {
+            color: #258169;
+        }
+
+        .util a {
+            color: #333;
+        }
+
+        #prevBtn:hover,
+        #nextBtn:hover {
+            color: #00b075;
+        }
+
+        /* header */
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            position: fixed;
+            width: 1200px;
+            z-index: 999;
+            padding: 0 20px;
+        }
+
+        #header:hover {
+            background: #292A2C;
+            transition: .5s;
+        }
+
+        #header::after {
+            content: '';
+            position: absolute;
+            background: #fff;
+            opacity: .85;
+            left: 0;
+            top: 95px;
+            width: 100%;
+            height: 0;
+            transition: .5s;
+        }
+
+        #header:hover::after {
+            height: 200px;
+        }
+
+
+        /* logo */
+        .logo {
+            margin-top: 10px;
+            width: 220px;
+        }
+
+        .logohover {
+            display: none;
+        }
+
+        #header:hover .logob {
+            display: none;
+        }
+
+        #header:hover .logohover {
+            display: block;
+        }
+
+        /* nav */
+        #header .inner {
+            height: 95px;
+        }
+
+        #gnb {
+            position: relative;
+            z-index: 9999;
+            height: 95px;
+            overflow: hidden;
+            transition: .5s;
+        }
+
+        #header:hover #gnb {
+            height: 280px;
+        }
+
+        /* 1 depth */
+        #header .main {
+            display: flex;
+        }
+
+        #header .main>li {
+            line-height: 95px;
+            padding: 4px 20px;
+        }
+
+        #gnb .main>li>a {
+            position: relative;
+        }
+
+        /* 1depth 효과 */
+        #gnb .main>li>a::after {
+            content: '';
+            position: absolute;
+            left: -13px;
+            bottom: -31px;
+            width: 140%;
+            height: 3px;
+            background-color: #258169;
+            transition: .4s;
+            transform: scaleX(0)
+        }
+
+        #gnb .main li>a:hover::after {
+            transform: scaleX(1);
+        }
+
+        /* 2 depth */
+        .sub li {
+            line-height: 1.8;
+            margin: 10px 12px;
+            display: block;
+        }
+
+        .sub a {
+            display: block;
+        }
+
+        /* util */
+        .util {
+            display: flex;
+            padding: 4px 10px;
+            height: 40px;
+            align-items: center;
+        }
+
+        .util .sns {
+            width: 60px;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .util .sns a {
+            padding: 0 10px;
+            display: inline-block;
+        }
+
+        .util .sns:hover a {
+            background: url(images/sns-icon.png) no-repeat;
+            height: 40px;
+            width: 40px;
+        }
+
+        .util .sns:hover p {
+            display: none;
+        }
+
+        .util span {
+            display: inline-block;
+            border: 3px solid;
+            vertical-align: middle;
+            border-radius: 50%;
+        }
+
+        .member {
+            display: flex;
+        }
+
+        .member li {
+            padding: 0 10px;
+        }
+
+        /* carousel */
+        .container {
+            position: relative;
+            width: 1200px;
+            height: 500px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slide {
+            display: flex;
+            width: 1200px;
+            height: 500px;
+        }
+
+        .slide img {
+            width: 1200px;
+            height: 500px;
+        }
+
+        /* button */
+        #prevBtn {
+            position: absolute;
+            width: 6rem;
+            height: 6rem;
+            top: 50%;
+            left: 5%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            font-size: 24px;
+            padding-top: 4px;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+        }
+
+        #nextBtn {
+            position: absolute;
+            width: 6rem;
+            height: 6rem;
+            top: 50%;
+            right: 5%;
+            transform: translate(50%, -50%);
+            z-index: 10;
+            font-size: 24px;
+            padding-top: 4px;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* indicator */
+        .indi {
+            display: flex;
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .indi li {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.4);
+            text-indent: -9899999px;
+            margin: 0 8px;
+            cursor: pointer;
+        }
+
+        .indi li:first-of-type {
+            background: #fff;
+        }
+
+        /* footer */
+        footer {
+            height: 100px;
+            background: #292A2C;
+            line-height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1 class="logo">
+            <a href="#" class="logob">
+                <img src="images/logo.png" alt="로고">
+            </a>
+            <a href="#" class="logohover">
+                <img src="images/logo-hover.png" alt="로고 호버">
+            </a>
+        </h1>
+        <div class="inner">
+            <nav id="gnb">
+                <ul class="main">
+                    <li>
+                        <a href="#">브랜드 소개</a>
+                        <ul class="sub">
+                            <li><a href="#">브랜드 소개</a></li>
+                            <li><a href="#">몬스터 블렌딩</a></li>
+                            <li><a href="#">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">메뉴 소개</a>
+                        <ul class="sub">
+                            <li><a href="#">신메뉴</a></li>
+                            <li><a href="#">전체 메뉴</a></li>
+                            <li><a href="#">MD</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">가맹 안내</a>
+                        <ul class="sub">
+                            <li><a href="#">가맹 안내</a></li>
+                            <li><a href="#">인테리어</a></li>
+                            <li><a href="#">가맹 문의</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                        <ul class="sub">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">SNS</a></li>
+                            <li><a href="#">문의 및 제휴</a></li>
+                        </ul>
+                    </li>
+                </ul><!-- //.main -->
+            </nav>
+        </div><!-- //.inner -->
+        <div class="util">
+            <div class="sns">
+                <a href="#">
+                    <p>SNS</p>
+                </a>
+            </div><!-- //.sns -->
+            <span></span>
+            <ul class="member">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+        </div><!-- //.util -->
+    </header>
+
+
+    <div class="container">
+        <ul class="slide">
+            <li><img src="images/slide3.jpg" id="lastClone" alt="이미지3"></li>
+            <li><img src="images/slide1.jpg" alt="이미지1"></li>
+            <li><img src="images/slide2.jpg" alt="이미지2"></li>
+            <li><img src="images/slide3.jpg" alt="이미지3"></li>
+            <li><img src="images/slide1.jpg" id="firstClone" alt="이미지1"></li>
+        </ul>
+        <button id="prevBtn">&lt;</button>
+        <button id="nextBtn">&gt;</button>
+        <ul class="indi">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>Copyright 배수현. All rights reserved.</p>
+    </footer>
+
+
+    <script>
+        const carouselSlide = document.querySelector(".slide");
+        const carouselImages = document.querySelectorAll(".slide img");
+
+        // Buttons
+        const prevBtn = document.querySelector("#prevBtn");
+        const nextBtn = document.querySelector("#nextBtn");
+
+        const indi = document.querySelectorAll(".indi li");
+
+        // Counter
+        let counter = 1;
+
+        // indicator index
+        let index = 1;
+        const size = 1200;
+
+        carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+
+        prevBtn.addEventListener("click", () => {
+            if (counter <= 0) return;
+            carouselSlide.style.transition = `transform 0.4s ease-in-out`;
+            counter--;
+            index = counter;
+            carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+            console.log(counter);
+            indicator(counter);
+        });
+
+        nextBtn.addEventListener("click", () => {
+            if (counter >= carouselImages.length - 1) return;
+            carouselSlide.style.transition = `transform 0.4s ease-in-out`;
+            counter++;
+            carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+            console.log(counter);
+            indicator(counter);
+        });
+
+        carouselSlide.addEventListener("transitionend", () => {
+            if (carouselImages[counter].id === "lastClone") {
+                carouselSlide.style.transition = "none";
+                counter = carouselImages.length - 2;
+                carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+            }
+            if (carouselImages[counter].id === "firstClone") {
+                carouselSlide.style.transition = "none";
+                counter = carouselImages.length - counter;
+                carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+            }
+            console.log(counter);
+            indicator(counter);
+        });
+
+        // indicator
+        for (let i = 0; i < indi.length; i++) {
+            indi[i].addEventListener("click", () => {
+                for (let j = 0; j < indi.length; j++) {
+                    indi[j].style.background = "#777";
+                }
+                counter = i + 1;
+                indi[i].style.background = "#fff";
+                carouselSlide.style.transition = `transform 0.4s ease-in-out`;
+                carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+            });
+        }
+
+        function indicator(index) {
+            if (index === 0 || index === 4) return;
+            for (let i = 0; i < indi.length; i++) {
+                indi[i].style.background = "#777";
+            }
+            indi[index - 1].style.background = "#fff";
+        }
+    </script>
+</body>
+
+</html>
