@@ -3,18 +3,19 @@
 @import url(typo.css);
 
 /* 작업중 */
-body * {outline: 1px solid red;}
+/* body * {outline: 1px solid red;} */
 
 /* 레이아웃: 전체 구조 */
 .container {
     width: 960px;
     margin: 0 auto;
-    background-color: lightgoldenrodyellow;
+    padding-bottom: 64px;
 }
-.counter {background-color: #777;}
-footer {
-    background-color: #777;
+
+i {
+    padding-right: 8px;
 }
+
 
 /* 패럴렉스 스크롤링(parallax Scrolling */
 .parallax {
@@ -29,17 +30,20 @@ header {
     height: 44px;
     width: 100%;
     padding: 10px 0;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 0 rgba(0,0,0,.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 0 rgba(0, 0, 0, .12);
     background-color: #fff;
 }
 
 /* 내비게이션 */
-#gnb li {
-    float: left;
+#gnb ul {
+    display: flex;
 }
+
+
 #gnb a {
     padding: 8px 16px;
 }
+
 #gnb a:hover {
     background-color: #bbb;
 }
@@ -48,41 +52,98 @@ header {
 /* 단위: px, %, em, rem, vw,vh, vmin, vmax */
 #sec1 {
     position: relative;
-    height:100vh;
+    height: 100vh;
     background-image: url(../images/bg1.png);
 }
+
 #sec1 h1 {
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: -86px;
-    margin-top: -16px;
+    transform: translate(-50%, -50%);
 }
 
 /* 메인 타이틀 */
 
+/* 섹션2, 3, 4 */
+.sec h2 {
+    padding-top: 64px;
+}
+
+.sec h2 + p {
+    margin: 24px 0 16px 0;
+}
 
 /* 섹션2: 나의 소개 */
 /* 기본 프로필 */
 .basic p:nth-of-type(1) {
     margin-bottom: 48px;
 }
+
+.profile2 {
+    display: flex;
+}
+
 /* 이미지 */
 .my_pic {
-    float: left;
+    flex-shrink: 0;
     width: 425px;
     margin-right: 48px;
     margin-left: 24px;
+    text-align: center;
 }
+
 /* 스킬: 프로그래스바(progressbar) */
+.skill h3 {
+    margin: 48px 0 32px 0;
+}
+
+.skill p i {
+    margin-right: 8px;
+}
+
+.skill p {
+    margin: 16px 0;
+}
+
+.progress {
+    background: #f1f1f1;
+}
+
+.progressbar {
+    background: #616161;
+    height: 36px;
+    color: #fff;
+    text-align: center;
+    line-height: 36px;
+}
+
+.progress:nth-of-type(1) div {
+    width: 90%;
+}
+
+.progress:nth-of-type(2) div {
+    width: 85%;
+}
+
+.progress:nth-of-type(3) div {
+    width: 80%;
+}
+
 /* 카운터(counter) */
-.counter{
+.counter {
+    background-color: #777;
     padding: 32px 0;
 }
+
+.counter ul {
+    display: flex;
+}
+
 .counter li {
-    float: left;
     width: 25%;
 }
+
 .counter span {
     display: block;
 }
@@ -92,31 +153,136 @@ header {
 #sec3 .parallax {
     background-image: url(../images/bg2.png);
 }
+
+.pf ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
 .pf li {
     width: 225px;
-    float:left;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    aspect-ratio: 1.4 / 1;
 }
+
 .pf li:nth-of-type(4n) {
     margin-right: 0;
+}
+
+.pfBtn {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.pfBtn a {
+    background: #f1f1f1;
+    padding: 12px 24px;
+}
+
+.pfBtn a:hover {
+    background: #ccc;
 }
 
 /* 섹션4: 연락처 */
 #sec4 .parallax {
     background-image: url(../images/bg3.png);
 }
-.map {
-    float: left;
-    width:284px;
+
+#sec4 .pos {
+    display: flex;
+    justify-content: space-between;
+    align-items:  flex-start;
+    margin: 48px auto 64px;
 }
+
+.map {
+    width: 284px;
+    aspect-ratio: 1.8 / 1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
 .right {
-    float: right;
     width: 640px;
 }
-input {padding: 8px; border: 1px solid #ccc}
-input:nth-of-type(1) {float:left; width: 49%; }
-input:nth-of-type(2) {float: right; width: 49%}
-input:nth-of-type(3) {float: left; display: block; width: 100%; margin-top: 8px;}
+
+.addr li {
+    margin-bottom: 4px;
+}
+
+.addr p {
+    margin: 32px 0 16px;
+}
+
+.addr p i {
+    padding-right: 0;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+input {
+    padding: 8px;
+    border: 1px solid #ccc
+}
+
+input:nth-of-type(1),
+input:nth-of-type(2) {
+    width: calc(50% - 4px);
+}
+
+input:nth-of-type(3) {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+}
+
+form div {
+    width: 100%; /* flex 영향으로 크기를 줘야 함 */
+    text-align: right;
+}
+
+form button {
+    background: #111;
+    padding: 12px 24px;
+    margin-top: 16px;
+}
 
 /* 푸터 */
+footer {
+    background-color: #777;
+    height: 288px;
+    padding: 64px 0;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.toTop {
+    display: inline-block;
+    background: #f1f1f1;
+    padding: 12px 24px;
+}
+
+
+.toTop:hover {
+    background: #ccc;
+}
+
+.sns {
+    display: flex;
+    margin: 16px 0;
+}
+
+.sns i {
+    padding: 0 8px;
+}
+footer:hover {
+    background: #000;
+}

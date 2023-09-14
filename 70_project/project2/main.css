@@ -33,7 +33,8 @@ button {
     color: var(--cfff);
 }
 
-.txt {
+.txt,
+button {
     font-family: "Segoe UI", Arial, sans-serif;
     font-size: 3.6rem;
 }
@@ -73,13 +74,12 @@ header {
 }
 
 /* 로고 */
-.logo {
-    width: 40%;
-    /* padding-top: 24px; */
-}
+
 
 /* 내비게이션 */
-#gnb {display: none;}
+#gnb {
+    display: none;
+}
 
 /* 섹션1 */
 #sec1 {
@@ -108,7 +108,7 @@ header {
 }
 
 /* 섹션 2, 3, 4 공통 */
-section{
+section {
     padding: 0 30px;
 }
 
@@ -126,10 +126,15 @@ section h2 {
     height: auto;
 }
 
+.sec23 li+li {
+    margin-top: 24px;
+}
+
 /* 섹션2 */
 #sec2 h2 {
     margin-bottom: 40px;
 }
+
 #sec2 li {
     position: relative;
 }
@@ -138,9 +143,7 @@ section h2 {
     #sec2 li:first-of-type ~ li 
     첫 번째 요소를 제외한 아래 모든 형제 요소
 */
-#sec2 li + li {
-    margin-top: 16px;
-}
+
 
 /* 섹션3, 4의 공통 */
 section:first-of-type~section>p {
@@ -148,9 +151,8 @@ section:first-of-type~section>p {
 }
 
 /* 섹션3 */
-#sec3 li + li {
-    margin-top: 32px;
-}
+
+
 #sec3 li h3 {
     margin: 16px 0;
 }
@@ -158,6 +160,11 @@ section:first-of-type~section>p {
 #sec3 li p:first-of-type {
     margin-bottom: 16px;
 }
+
+.sec3 li+li{
+    /* padding-top: 32px; */
+}
+
 
 /* 버튼 */
 #sec3 a {
@@ -194,9 +201,9 @@ section:first-of-type~section>p {
 }
 
 .map {
-    height: 184px;
+    width: 100%;
+    aspect-ratio: 1.8 / 1;
 }
-
 /* 푸터 */
 footer {
     /* 한 줄 텍스트일 때 박스의 수직 중앙 정렬 */
@@ -206,18 +213,23 @@ footer {
     padding: 32px 0;
 }
 
+/********************* 모바일 ************************/
 
-/* 992px 이상 */
-@media (min-width: 992px) {
+
+/****************** 576px 이상 ***********************/
+@media (min-width: 576px) {
 
 
     /* 헤더 */
     /* 로고 */
     .logo {
-        padding-top: 16px;
+        vertical-align: middle;
     }
 
     /* 내비게이션 */
+    #gnb {
+        display: block;
+    }
 
     #gnb li {
         display: inline-block;
@@ -226,20 +238,13 @@ footer {
 
 
     /* 섹션 공통 */
-    .sec {
-        position: relative;
-        width: 1500px;
-        margin: 0 auto;
-    }
+
 
     /* 섹션1 */
-    
-
-    /* 섹션2,3,4 공통 */
-    section{
-        padding: 0;
+    .tit2 {
+        display: inline-block
     }
-    
+
 
     /* 섹션2,3 공통 */
     .sec23 ul {
@@ -250,8 +255,96 @@ footer {
     }
 
     .sec23 li {
-        width: 360px;
-        height: 240px;
+        
+        /* calc(숫자 연산자 숫자) ~숫자와 연산자 사이는 띄어써야 함. */
+        width: calc(50% - 8px);
+        margin-right: 16px;
+    }
+
+    .sec23 li:nth-of-type(2n) {
+        margin-right: 0;
+    }
+
+    /* 8개 이미지 중  3번째 이미지부터 6개만 위쪽 여백 지정 */
+    .sec23 li:nth-of-type(2)~li {
+        margin-top: 16px;
+    }
+
+    /* 위에 폰에서 지정한 값을 초기화 */
+    .sec23 li+li {
+        margin-top: 0;
+    } 
+
+    /* 섹션2 */
+    #sec2 span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: var(--c111);
+        padding: 8px 16px;
+    }
+
+    /* 섹션3 */
+    #sec3 li {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 510px;
+        max-height: 510px;
+    }
+
+
+    /* 섹션4 */
+    #sec4 input {
+        display: block;
+    }
+
+    /* .map {
+        height: 845px;
+    } */
+    .map {
+        width: 100%;
+        aspect-ratio: 1.8 / 1;
+    }
+
+    /* 푸터 */
+
+
+}
+
+/************* @media 576px 이상 ******************/
+
+
+/****************** 992px 이상 ***********************/
+@media (min-width: 992px) {
+
+
+    /* 헤더 */
+    /* 로고 */
+    /* 내비게이션 */
+
+    /* 섹션 공통 */
+    .sec { 
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+
+    /* 섹션1 */
+
+
+    /* 섹션2,3,4 공통 */
+    section {
+        padding: 0;
+    }
+
+
+    /* 섹션2,3 공통 */
+    .sec23 li {
+        width: calc(25% - 15px);
+        margin-right: 20px;
+    }
+
+    .sec23 li:nth-of-type(2n) {
         margin-right: 20px;
     }
 
@@ -259,10 +352,10 @@ footer {
         margin-right: 0;
     }
 
-
-
-    /* 섹션2 */
-    /* id > class, 가상 클래스(:), 속성 > 요소, 가상요소(::) */
+    .sec23 li:nth-of-type(3),
+    .sec23 li:nth-of-type(4) {
+        margin-top: 0;
+    }
 
 
     /* 8개 이미지 중  5번째 이미지부터 4개만 위쪽 여백 지정 */
@@ -300,5 +393,6 @@ footer {
     /* 푸터 */
 
 
-} /* @media 992px 이상 */
+}
 
+/* @media 992px 이상 */

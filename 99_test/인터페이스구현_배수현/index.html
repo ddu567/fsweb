@@ -428,8 +428,8 @@
 
         // indicator index
         let index = 1;
-        const size = 1200;
-
+        const size = carouselImages[0].clientWidth;
+        console.log(size);
         carouselSlide.style.transform = `translateX(${-size * counter}px)`;
 
         prevBtn.addEventListener("click", () => {

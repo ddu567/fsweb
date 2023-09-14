@@ -14,8 +14,9 @@ let index = 1;
 /*
 Element.clientWidth 속성은 인라인 요소나 CSS 상에 존재하지 않는 요소에 대해서는 0을 나타내고, 그렇지 않다면 엘리먼트의 내부 너비를 픽셀로 나타냅니다. 내부 너비는 안쪽 여백(패딩)을 포함하지만, 테두리, 바깥 여백(마진) 그리고 수직 스크롤바의 너비는 포함하지 않습니다.
 */
-// html에서 0번째 요소인 Clone요소를 가리기 위해 첫번쨰 이미지의 width값 만큼     carousel-slide의 translateX값을 이동시킨다.
+// html에서 0번째 요소인 Clone요소를 가리기 위해 첫번쨰 이미지의 width값 만큼 carousel-slide의 translateX값을 이동시킨다.
 const size = carouselImages[0].clientWidth;
+console.log(carouselImages[0].clientWidth);
 carouselSlide.style.transform = `translateX(${-size * counter}px)`;
 
 prevBtn.addEventListener("click", () => {
