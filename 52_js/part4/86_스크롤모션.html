@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤모션</title>
+    <style>
+
+        section {
+            height: 100vh;
+        }
+
+        div {
+            width: 360px;
+            height: 240px;
+            background: lightgray;
+            transform: translateY(600px);
+            transition: .5s;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h2>섹션1</h2>
+    </section>
+    <section>
+        <h2>섹션2</h2>
+        <div>박스</div>
+    </section>
+
+    <script>
+        /* 
+            document.documentElement ~ <html> 요소 반환
+            document.body ~ <body> 요소 변환
+
+            요소.scrollTop ~ 요소의 스크롤 양 반환
+            요소.scrollLeft ~ 요소의 스크롤 양 반환
+        */
+
+        /* 
+            스크롤바를 아래로 내리면 아래 박스가 위로 올라온다.
+        */
+
+        // 변수 선언
+        // const 변수1=값, 변수2=값, ...;
+        const docEle = document.documentElement,
+            sec = document.querySelectorAll('section'),
+            box = document.querySelector('div');
+        
+        window.onscroll = function(){
+            let st = docEle.scrollTop;
+            console.log(st);
+
+            if (st > 720) {
+                box.style.transform = 'translateY(0)';
+            }    else {
+                box.style.transform = 'translateY(600px)';
+            }
+        };
+
+    </script>
+</body>
+
+</html>

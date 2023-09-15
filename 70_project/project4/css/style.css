@@ -1,0 +1,70 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url(typo.css);
+
+/* fullPage Setting */
+#wrap {
+    height: 100vh;
+}
+
+.sec {
+    width: 100vw;
+    height: 100vh;
+}
+
+#sec1 {
+    background: lightblue;
+}
+
+#sec2 {
+    background: lightcoral;
+}
+
+#sec3 {
+    background: lightseagreen;
+}
+
+#sec4 {
+    background: lightgoldenrodyellow;
+}
+
+/* 헤더 */
+
+/* 섹션1 */
+/* 섹션2 */
+/* 섹션3 */
+/* 패럴렉스 이미지 */
+#sec3 {
+    background: url(../images/230814_1_pc_pick_bg.jpg) no-repeat 50% 50%/cover;
+    position: relative;
+}
+#sec3 .container{
+    display: flex;
+    width: 1400px;
+    position: absolute;
+    justify-content: space-between;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#sec3 .des {
+    width: 400px;
+    background: yellowgreen;
+    text-align: right;
+}
+/* 고스트 버튼 */
+#sec3 a {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 6px 24px;
+}
+/* 상품 이미지 */
+#product {
+    /* 요소의 텍스트 숨기기 */
+    text-indent: -9999em;
+    width: 912px;
+    height: 575px;
+    background: url(../images/autumn_img.png) no-repeat 0 0/contain;
+}
+/* 섹션4 */
+/* 푸터 */

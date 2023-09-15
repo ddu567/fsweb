@@ -1,4 +1,9 @@
-@charset "uft-8";
+@charset "utf-8";
+
+/* reset.css */
+html {
+    scroll-behavior: smooth;
+}
 
 * {
     box-sizing: border-box;
