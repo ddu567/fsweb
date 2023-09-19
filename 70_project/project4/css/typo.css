@@ -15,7 +15,26 @@ html {
 body {
     font: 1.5rem/1.8 'NEXON Lv1 Gothic OTF', sans-serif;
 }
+/* header */
+#header .main a {
+    color: #fff;
+    font-size: 1.8rem;
+}
 
+#header .sub a {
+    color: #323232;
+    font-size: 1.4rem;
+}
+
+#header body {
+    height: 2000px;
+}
+
+#header .util, .sns a {
+    color: #fff;
+}
+
+/* 섹션3 */
 #sec3,
 #sec3 a {
     color: #fff;
