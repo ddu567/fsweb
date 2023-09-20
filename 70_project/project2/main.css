@@ -36,6 +36,9 @@ button {
 .txt,
 button {
     font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.txt {
     font-size: 3.6rem;
 }
 
