@@ -98,35 +98,16 @@
   </dl>
   <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
   <script>
+    
+        $("dd:not(:first)").hide();
     $("dl dt").click(function () {
-      if ($(this).next('dd').css('dispaly')== 'none') {
-        $(dd).sliedeUp("slow");
+      if ($(this).next('dd').css('display') == 'none') {
+        
+        $("dd").slideUp("slow");
         $(this).next().slideDown("slow");
       }
     })
 
-    /*
-    //정답. 위에 것 뭐가 틀렸는지 공부좀해라
-
-    $(function(){
-   // $('dd').hide();
-   //$("dd:first").show();
-    $("dd:not(:first)").hide();
-
-
-    $('dl dt').click(function(){
-    
-      if($(this).next('dd').css('display')=='none'){
-        $("dd").slideUp("slow");
-        $(this).next().slideDown("slow");
-      }
-    
-    });
-
-
-  });
-    
-    */
   </script>
 </body>
 
