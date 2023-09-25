@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    .flower {
+      position: relative;
+      left: 10px;
+      width: 100px;
+      height: 100px;
+      border: 1px solid;
+      border-radius: 50%;
+      background: url(img/f1.png), no-repeat 50% 50%;
+      animation-name: move;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;/* 무한반복 */
+      animation-direction: alternate; /* 왕복 */
+    }
+    @keyframes move {
+      0% {left: 10px;}
+      100% {left: 500px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="flower" ></div>
+</body>
+</html>
