@@ -7,12 +7,14 @@ public class A1004_hw36 {
     
     Scanner scanner = new Scanner(System.in);
 
-    int i, j;
-    int n, m;
+    System.out.println("입력");
 
-    for(n = 1; n <= 10; n++){
+    int n = scanner.nextInt();
+    int m = scanner.nextInt();
+    
+    for(n = 1 ; n <= 10; n++){
       for(m = 1; m <=10; m++){
-
+        System.out.println("(" + n + ", " + m + ")");
       }
     }
 
