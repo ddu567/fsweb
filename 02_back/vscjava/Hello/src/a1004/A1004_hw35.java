@@ -8,10 +8,6 @@ public class A1004_hw35 {
 
     System.out.println("입력");
 
-
-
-  
-
     scanner.close();
   }
 }

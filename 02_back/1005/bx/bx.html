@@ -7,6 +7,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.css">
   <style>
+    /* reset */
     * {
       margin: 0;
       padding: 0;
@@ -19,22 +20,24 @@
 
     .bx-wrapper {
       border: none;
+      width: 80%;
+      margin: 0 auto;
     }
 
+    /* prev, next button */
     .bx-wrapper .bx-controls-direction a {
-      width: 32px;
-      height: 32px;
-
+      width: 40px;
+      height: 40px;
     }
 
     .bx-wrapper .bx-prev {
-      left: 10px;
+      left: 4%;
       background: url(images/btn_slide_prev.png) no-repeat 0 0;
       background-size: cover;
     }
 
     .bx-wrapper .bx-next {
-      right: 10px;
+      right: 4%;
       background: url(images/btn_slide_next.png) no-repeat 0 0;
       background-size: cover;
     }
@@ -43,6 +46,13 @@
     .bx-wrapper .bx-next:focus {
       background-position: 0 0;
     }
+
+/* pager */
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+    position: absolute;
+    bottom: 4%;
+    width: 100%;
+}
   </style>
 </head>
 
@@ -62,7 +72,7 @@
     $(function () {
       $('.bxslider').bxSlider({
         mode: 'fade',
-        slideWidth: 600
+        // slideWidth: 800
       });
     });
   </script>
