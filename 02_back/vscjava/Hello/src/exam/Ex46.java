@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ex46 {
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
-    System.out.print("터널의 높이가 차례대로 입력됩니다>");
+    System.out.println("터널의 높이가 차례대로 입력됩니다");
     int[] tn = new int[3];
     for(int i = 0; i<3; i++){
       tn[i] = scan.nextInt();

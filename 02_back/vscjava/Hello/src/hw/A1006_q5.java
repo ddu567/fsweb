@@ -7,7 +7,7 @@ public class A1006_q5 {
     int[][] array1 = { { 1, 2 }, { 3, 4 } };
     int[][] array2 = { { 5, 6 }, { 7, 8 } };
 
-    int[][] mergedArray = mergeArrays(array1, array2);
+
 
   }
 }

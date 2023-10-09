@@ -9,5 +9,11 @@ public class A1006_q3 {
     int targetValue = 2;
     int frequency = 0;
 
+    for(int i=0; i<numbers.length; i++) {
+      if(targetValue == numbers[i]) {
+        frequency++;
+      }
+    }
+    System.out.println("빈도수: " + frequency);
   }
 }

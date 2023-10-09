@@ -6,12 +6,14 @@ public class Ex45 {
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
 
-    System.out.println("정수 a, b, c가 차례로 입력됩니다.");
-
     // 변수 선언
+    System.out.println("a 값을 입력하세요> ");
     int a = scan.nextInt();
+    System.out.println("b 값을 입력하세요> ");
     int b = scan.nextInt();
+    System.out.println("c 값을 입력하세요> ");
     int c = scan.nextInt();
+
     
     double x1 = (-b + Math.sqrt(b * b - 4 * a * c)) / 2 * a;
     double x2 = (-b - Math.sqrt(b * b - 4 * a * c)) / 2 * a;
@@ -19,7 +21,7 @@ public class Ex45 {
     for (a = -10; a >= -10 && a != 0 && a <= 10; a++) {
       for (b = -10; b >= -10 && b <= 10; b++) {
         for (c = -10; c >= -10 && c <= 10; c++) {
-          // result1 = a*x1*x1+b*x1+c=0;
+          // int result1 = a*x1*x1+b*x1+c=0;
         }
       }
     }
