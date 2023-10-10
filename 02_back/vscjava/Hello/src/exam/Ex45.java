@@ -7,26 +7,37 @@ public class Ex45 {
     Scanner scan = new Scanner(System.in);
 
     // 변수 선언
-    System.out.println("a 값을 입력하세요> ");
+    System.out.print("a 값을 입력하세요> ");
     int a = scan.nextInt();
-    System.out.println("b 값을 입력하세요> ");
-    int b = scan.nextInt();
-    System.out.println("c 값을 입력하세요> ");
-    int c = scan.nextInt();
+    if (a >= -10 && a <= 10 && a != 0) {
+      System.out.print("b 값을 입력하세요> ");
+      int b = scan.nextInt();
+      if (b >= -10 && b <= 10) {
+        System.out.print("c 값을 입력하세요> ");
+        int c = scan.nextInt();
+        if (c >= -10 && c <= 10) {
 
-    
-    double x1 = (-b + Math.sqrt(b * b - 4 * a * c)) / 2 * a;
-    double x2 = (-b - Math.sqrt(b * b - 4 * a * c)) / 2 * a;
+          // Math.sqrt() 제곱근 함수 ,double
+          // Math.pow(a,b) = a^b, double
+          // 판별식 D
+          double D = Math.pow(b, 2) - (4 * a * c);
 
-    for (a = -10; a >= -10 && a != 0 && a <= 10; a++) {
-      for (b = -10; b >= -10 && b <= 10; b++) {
-        for (c = -10; c >= -10 && c <= 10; c++) {
-          // int result1 = a*x1*x1+b*x1+c=0;
+          double x1 = (-b + Math.sqrt(D)) / 2 * a;
+          double x2 = (-b - Math.sqrt(D)) / 2 * a;
+
+          if (D < 0) {
+            System.out.println("실근이 없습니다.");
+          } else if (D == 0) {
+            double x = -b / (2 * a);
+            System.out.println("방정식의 해는 " + x);
+          } else if (D > 0) {
+            // 소수점 아래 두 자리 출력: printf("%.2f, x")
+            System.out.printf("방정식의 해는 " + "%.2f\n", x1);
+            System.out.printf("방정식의 해는 " + "%.2f\n", x2);
+          }
         }
       }
     }
-
-    // https://www.walterz.net/2023/03/16/quadratic-equation-python-c-java/
 
     scan.close();
   }

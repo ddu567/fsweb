@@ -18,8 +18,6 @@ public class Ch5_9 {
             System.out.println("---------------------------------------------------------");
             System.out.print("선택> ");
             int num = Integer.parseInt(scan.nextLine());
-            // scan.nextInt()는 한 번 숫자를 입력하면 끝
-            // scan.nextLine()은 입력하면 그 값이 저장되어 다른 항목 선택 가능
 
             if (num == 1) {
                 System.out.print("학생수>");
