@@ -9,8 +9,10 @@ public class Ex52 {
     System.out.print("숫자를 입력하세요> ");
     int num = scan.nextInt();
 
-    if (num >= 1 && num < 100) {
-      if (num % 10 == 1) {
+    if (num > 0 && num <= 100) {
+      if (num == 11 || num == 12 || num == 13) {
+        System.out.println(num + "th");
+      } else if (num % 10 == 1) {
         System.out.println(num + "st");
       } else if (num % 10 == 2) {
         System.out.println(num + "nd");
@@ -20,7 +22,6 @@ public class Ex52 {
         System.out.println(num + "th");
       }
     }
-
     scan.close();
   }
 }
