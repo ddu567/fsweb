@@ -20,7 +20,8 @@ public class Ex53 {
     }
     
     // java에서는 %lf 사용 불가 (c/c++ 가능)
-    System.out.printf("최댓값: " + "%f", (int) max);
+    // %f -> 소수점 6자리 (기본)
+    System.out.printf("최댓값: " + "%f", (double) max);
     scan.close();
 
   }

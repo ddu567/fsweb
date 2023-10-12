@@ -6,8 +6,8 @@ public class Ex59 {
   public static void main(String[] args) {
 
     Scanner scan = new Scanner(System.in);
-    int[] lotto = { 0, 0, 0, 0, 0, 0, 0 };
-    int[] have = { 0, 0, 0, 0, 0, 0, 0 };
+    int[] lotto = new int[7];
+    int[] have = new int[7];
 
     System.out.println("로또 당첨번호를 입력하세요");
     for (int i = 0; i <= 6; i++) {

@@ -6,7 +6,7 @@ public class Ex56 {
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
 
-    int[] game = { 0, 0, 0, 0 };
+    int[] game = new int[4];
     System.out.println("윷의 각각 생태를 입력해주세요.");
     game[0] = scan.nextInt();
     game[1] = scan.nextInt();
