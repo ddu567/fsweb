@@ -8,11 +8,11 @@ public class Ex56 {
 
     int[] game = new int[4];
     System.out.println("윷의 각각 생태를 입력해주세요.");
-    game[0] = scan.nextInt();
-    game[1] = scan.nextInt();
-    game[2] = scan.nextInt();
-    game[3] = scan.nextInt();
+    for(int i = 0; i<game.length;i++){
+      game[i] = scan.nextInt();
+    }
 
+    // 배열 출력
     // System.out.println(Arrays.toString(game));
 
     int frequency = 0;

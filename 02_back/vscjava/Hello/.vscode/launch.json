@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Ex61",
+      "request": "launch",
+      "mainClass": "exam.Ex61",
+      "projectName": "Hello_1d007021"
+    },
+    {
+      "type": "java",
+      "name": "Ch6_1314",
+      "request": "launch",
+      "mainClass": "hw.Ch5.Ch6_1314",
+      "projectName": "Hello_1d007021"
+    },
+    {
+      "type": "java",
       "name": "A1006_q5",
       "request": "launch",
       "mainClass": "hw.A1006_q5",
