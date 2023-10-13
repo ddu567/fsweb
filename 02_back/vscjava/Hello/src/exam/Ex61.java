@@ -10,15 +10,15 @@ public class Ex61 {
     System.out.print("숫자를 입력하세요> ");
     int a = scan.nextInt();
     System.out.print("연산기호를 입력하세요> ");
-    String str = scan.next();
+    String calc = scan.next();
     System.out.print("숫자를 입력하세요> ");
     int b = scan.nextInt();
 
-    if (str == "+") {
+    if (calc == "+") {
       System.out.println(a + b);
-    } else if (str == "-") {
+    } else if (calc == "-") {
       System.out.println(a - b);
-    } else if (str == "*") {
+    } else if (calc == "*") {
       System.out.println(a * b);
     } else {
       System.out.printf("%.2f", (double) (a / b));
