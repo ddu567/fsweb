@@ -1,22 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>다소니 심리상담</title>
   <link rel="stylesheet" href="css/main.css">
+  <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+  <script src="js/main.js"></script>
 </head>
+
 <body>
-  
+
   <div id="topMain">
     <div class="logo">
-
+      <img src="img/dasoni_logo.png" alt="logo">
     </div> <!--//.logo -->
+    <div class="headerLine"></div>
     <div id="nav">
-
+      <ul class="menu">
+        <li class="">
+          <a href="#">ABOUT 다소니</a>
+          <ul>
+            <li><a href="#">인사말</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">오시는길</a></li>
+            <li><a href="#">마음산책</a></li>
+            <li><a href="#">후기</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">상담진 소개</a>
+          <ul>
+            <li><a href="#">대표/슈퍼바이저</a></li>
+            <li><a href="#">다소니 상담진</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">심리상담</a>
+          <ul>
+            <li><a href="#">성인심리상담</a></li>
+            <li><a href="#">청소년/아동심리상담</a></li>
+            <li><a href="#">부부상담</a></li>
+            <li><a href="#">가족상담</a></li>
+            <li><a href="#">심리상담 예약신청</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">심리검사</a>
+          <ul>
+            <li><a href="#">다소니전문심리검사</a></li>
+            <li><a href="#">종합심리평가</a></li>
+            <li><a href="#">신경심리평가</a></li>
+            <li><a href="#">단일검사</a></li>
+            <li><a href="#">심리검사 예약신청</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">관계테라피</a>
+          <ul>
+            <li><a href="#">부부관계테라피</a></li>
+            <li><a href="#">가족관계테라피</a></li>
+            <li><a href="#">커플관계테라피</a></li>
+          </ul>
+        </li>
+      </ul>
     </div><!-- //#nav -->
   </div><!-- //#topMain -->
 
-  <script src="js/main.js"></script>
+  <section id="sec1">
+    <ul class="bxslider">
+      <li>
+        <a href="#"><img src="img/main_visual1.jpg" alt=""></a>
+        <div class="tbox">
+          <p>언택트시대 필수 과정</p>
+          <h2>비대면 상담</h2>
+          <h2>비대면 검사</h2>
+          <p>이제 당신의 공간에서 전문상담사를 만나보세요</p>
+        </div>
+        <div class="circle">
+          <p>다소니에서</p>
+          <p>가능</p>
+        </div>
+      </li>
+      <li>
+        <a href="#"><img src="img/main_visual2.jpg" alt=""></a>
+        <div class="tbox">
+          <p>가격부담 Down x 치료기대효과UP</p>
+          <h2>다소니관계테라피</h2>
+          <p>검사와 상담이 모두 필요한 여러분에게 딱!</p>
+        </div>
+      </li>
+    </ul>
+    <div class="outside">
+      <p><span id="slider-prev"></span><span id="slider-next"></span></p>
+    </div>
+  </section>
+  
+
 </body>
+
 </html>
