@@ -56,7 +56,7 @@ nav ul>li>a {
 
 /* *********************************** */
 
-
+/* logo */
 #topMain .logo {
     height: 110px;
     padding-top: 30px;
@@ -67,7 +67,7 @@ nav ul>li>a {
     object-fit: contain;
 }
 
-
+/* nav */
 .headerLine {
     background-image: url(../img/header_line.png);
     height: 2px;
@@ -191,8 +191,28 @@ nav:hover .sub {
     text-align: center;
 }
 
-.tbox h2 {
+.tbox .mtext {
     margin: 10px 0 30px;
+    transform: translate(0, 70px);
+    text-align: center;
+    transition: all 1s;
+    opacity: 0;
+}
+
+.tbox .stext {
+    transform: translate(0, 70px);
+    opacity: 0;
+    transition: all 1s 1s;
+}
+
+.tbox .mtext .on {
+    transform: translate(0,0);
+    opacity: 1;
+}
+
+.tbox p .on {
+    transform: translate(0,0);
+    opacity: 1;
 }
 
 .circle {
@@ -218,18 +238,22 @@ nav:hover .sub {
 }
 
 .bx-wrapper .bx-controls-direction a {
-    width: 100px;
-    height: 100px;
+    width: 36px;
+    height: 36px;
     /* border: 1px solid #333;
     border-radius: 50%; */
 }
 
 .bx-wrapper .bx-prev {
-    background: url(../img/main_prev.png) no-repeat;
+    background: url(../img/main_prev.png) no-repeat 0 0/contain;
+    left: 10%
+
 }
 
 .bx-wrapper .bx-next,
 .bx-wrapper .bx-next:focus,
 .bx-wrapper .bx-next:hover {
-    background: url(../img/main_next.png) no-repeat;
+    background: url(../img/main_next.png) no-repeat 0 0/contain;
+    right: 10%
 }
+

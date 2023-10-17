@@ -107,7 +107,6 @@ header .gnb {
   height:0;
   overflow: hidden;
   transition: all 0.3s;
-  /* background: antiquewhite; */
 }
 .gnb ul:hover li ul{
   height:350px;
