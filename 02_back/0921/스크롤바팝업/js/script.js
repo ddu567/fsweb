@@ -25,7 +25,7 @@ $(function () {
       $('nav').removeClass('fixed')
     }
 
-    if (sct >= 2300) {
+    if (sct >= 2300) {0
       $('.s4_cover>div').addClass('active');
     }
 
