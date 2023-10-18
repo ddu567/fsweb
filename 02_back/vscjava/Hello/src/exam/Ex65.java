@@ -11,8 +11,7 @@ public class Ex65 {
     if (a >= 1 && a <= 10) {
       for (int i = 1; i <= a; i++) {
         if (a%3 == 0) {
-          String x = String.valueOf(a);
-          x = "x";
+
         }
         System.out.print(i + " ");
       }

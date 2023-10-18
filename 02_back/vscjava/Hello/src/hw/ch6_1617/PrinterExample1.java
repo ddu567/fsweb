@@ -16,7 +16,7 @@ class Printer {
 
 
 }
-
+/* 
 public class PrinterExample1 {
   public static void main(String[] args) {
     Printer.println(10);       // int
@@ -25,3 +25,4 @@ public class PrinterExample1 {
     Printer.println("홍길동"); // String
   }
 }
+*/
