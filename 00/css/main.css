@@ -1,9 +1,7 @@
 @charset "utf-8";
 @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
 
-* {
-    outline: 1px solid red;
-}
+/* * {outline: 1px solid red;} */
 
 /* reset */
 * {
@@ -47,20 +45,27 @@ img {
 }
 
 /* nav */
+.headerLine {
+    background: url(../img/header_line.png) no-repeat 0 0/contain;
+    width: 100%;
+    height: 2px;
+}
+
 nav {
     position: relative;
-
+    height: 50px;
 }
 
 .menu {
     display: flex;
     justify-content: space-around;
-    padding: 0 200px;
+    padding: 0 250px;
     text-align: center;
     line-height: 50px;
     width: 100%;
     height: 50px;
     overflow: hidden;
+    transition: all .5s;
 }
 
 .menu::after {
@@ -68,23 +73,19 @@ nav {
     width: 100%;
     position: absolute;
     top: 50px;
-    background: antiquewhite;
-    
 }
 
-nav:hover .menu::after {
-    height: 350px;
+.menu:hover,
+.menu:hover::after {
+    transition: all .5s;
+    background: #fff;
+    height: 360px;
+    z-index: 8;
 }
-
-.nav:hover .menu{
-    /* height: 350px; */
-    background: #000;
-}
-
 
 .menu>li {
     width: 180px;
-
+    z-index: 9;
 }
 
 .menu>li>a {
@@ -93,5 +94,79 @@ nav:hover .menu::after {
 
 .menu .sub {
     font-size: 1.6rem;
-    /* display: none; */
+    padding-top: 12px;
+}
+
+.menu .sub a {
+    display: inline-block;
+    padding: 0 12px;
+    line-height: 3rem;
+}
+
+.sub a:hover {
+    background: url(../img/menu_hover.png) no-repeat 0 0/contain;
+
+}
+
+.menu .sub::before {
+    position: absolute;
+    content: " ";
+    background-color: #ccc;
+    width: 100%;
+    height: 1px;
+    top: 50px;
+    left: 0;
+}
+.menu:hover .sub::before {
+    transition: all .5s;
+    background: url(../img/header_line.png) no-repeat 0 0/contain;
+    width: 100%;
+    height: 2px;
+}
+
+/* section1 */
+#s1 {
+    width: 100%;
+    height: 100%
+}
+/* slider */
+#s1 ul {
+    position: relative;
+}
+
+#s1 ul li {
+    position: absolute;
+}
+
+.s1_tbox {
+    position: absolute;
+    width: 36%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(../img/main_txt_box.png) no-repeat 50% 50%/contain;
+    padding: 50px;
+}
+
+.t1txt{
+    font-size: 4.2rem;
+    padding: 20px;
+    text-align: center;
+    transition: all 1s;
+    transform: translate(0, 70px);
+    opacity: 0;
+}
+
+.t2txt {
+    font-size: 1.6rem;
+    padding: 20px;
+    display: block;
+    transition: all 1s;
+    transform: translate(0, 70px);
+    opacity: 0;
+}
+
+.on {
+    transform: translate(0, 0);
+    opacity: 1;
 }
