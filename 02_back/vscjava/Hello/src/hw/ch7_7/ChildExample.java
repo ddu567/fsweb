@@ -31,5 +31,7 @@ class Child extends Parent {
 public class ChildExample {
   public static void main(String[] args) {
     Child child = new Child();
+
+    System.out.println(child); // 주의 떠서 임의로 삽입함
   }
 }

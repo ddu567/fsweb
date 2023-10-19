@@ -1,6 +1,6 @@
 package hw.ch6_1617;
 
-class Printer {
+class Printer1 {
   public static void println(int value){
     System.out.println(value);
   }

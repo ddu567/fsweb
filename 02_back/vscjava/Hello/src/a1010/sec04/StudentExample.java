@@ -7,5 +7,8 @@ public class StudentExample {
     
     Student s2 = new Student();
     System.out.println("s2 변수가 또 다른 Student 객체를 잠조합니다.");
+
+    System.out.println(s2); // 주의 떠서 임의로 삽입함
+    System.out.println(s1); // 주의 떠서 임의로 삽입함
   }
 }

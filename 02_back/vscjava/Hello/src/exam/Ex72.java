@@ -30,6 +30,7 @@ public class Ex72 {
 
     }
 
+    scan.close();
   
   }
 }

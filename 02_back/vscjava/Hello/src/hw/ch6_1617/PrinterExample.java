@@ -1,6 +1,6 @@
 package hw.ch6_1617;
 
-class Printer {
+class Printer2 {
   public void println(int value){
     System.out.println(value);
   }
@@ -19,7 +19,7 @@ class Printer {
 
 public class PrinterExample {
   public static void main(String[] args) {
-    Printer printer = new Printer();
+    Printer2 printer = new Printer2();
     printer.println(10);       // int
     printer.println(true);     // boolean
     printer.println(5.7);      // double

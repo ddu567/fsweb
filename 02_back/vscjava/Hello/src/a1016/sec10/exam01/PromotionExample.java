@@ -16,5 +16,7 @@ public class PromotionExample {
     a = c; // A <- C (자동 타입 변환)
     a = d; // A <- D (자동 타입 변환)
     a = e; // A <- E (자동 타입 변환)
+
+    System.out.println(a); // 주의 떠서 그냥 삽입함
   }
 }
