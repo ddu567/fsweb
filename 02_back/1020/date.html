@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>시계</title>
+  <script>
+    document.write("<h1>현재날짜/시간 정보</h1>");
+    var today = new Date();
+    var nYear = today.getFullYear();
+    var nMonth = today.getMonth()+1;
+    var nDate = today.getDate();
+    var nDay = today.getDay();
+    var nHour = today.getHours();
+    var nMinute = today.getMinutes();
+    var nSeconds = today.getSeconds();
+
+    document.write("년: "+nYear+"<br/>");
+    document.write("월: "+nMonth+"<br/>");
+    document.write("일: "+nDate+"<br/>");
+    document.write("요일: "+nDay+"<br/>");
+    document.write("시: "+nHour+"<br/>");
+    document.write("분: "+nMinute+"<br/>");
+    document.write("초: "+nSeconds+"<br/>");
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
