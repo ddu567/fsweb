@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>아날로그1</title>
+  <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+  <script>
+    $(function () {
+      autotime();
+
+      setInterval(autotime, 1000);
+
+      function autotime() {
+        var today = new Date();
+        var y = today.getFullYear();
+        var m = today.getMonth() + 1;
+        var d = today.getDate();
+        var n = today.getDay();
+        var yoil;
+        if (n == '0') {
+          yoil = "일"
+        } else if (n == '1') {
+          yoil = "월"
+        } else if (n == '2') {
+          yoil = "화"
+        } else if (n == '3') {
+          yoil = "수"
+        } else if (n == '4') {
+          yoil = "목"
+        } else if (n == '5') {
+          yoil = "금"
+        } else {
+          yoil = "토"
+        }
+
+        var h = today.getHours();
+        var m1 = today.getMinutes();
+        var s = today.getSeconds();
+
+        // document.getElementById('year').innerHTML = y;
+        $("#year").text(y);
+        document.getElementById('month').innerHTML = m;
+        document.getElementById('date').innerHTML = d;
+        document.getElementById('nday').innerHTML = n;
+        document.getElementById('hour').innerHTML = h;
+        document.getElementById('minute').innerHTML = m1;
+        document.getElementById('second').innerHTML = s;
+
+        if (h > 12) {
+          h = h - 12;
+        }
+        var dh = (h * 30) + (m1 / 2);
+        var dh = parseInt(dh); /* 시침의 각도를 정수형으로 변환 */
+        var dm = m1 * 6
+        var ds = s * 6;
+        $('#hour1').css("transform", "rotate(" + dh + "deg)")
+        $('#minute1').css("transform", "rotate(" + dm + "deg)")
+        $('#second1').css("transform", "rotate(" + ds + "deg)")
+      }
+    });
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #clock {
+      margin: 100px auto 0;
+      padding: 0;
+      width: 300px;
+      height: 300px;
+      border: 1px solid #333;
+      position: relative;
+    }
+
+    #clock img {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>
+    <span id="year">0000</span>년
+    <span id="month">00</span>월
+    <span id="date">00</span>일
+    <span id="nday">0</span>요일
+    <span id="hour">00</span>시
+    <span id="minute">00</span>분
+    <span id="second">00</span>초
+  </h1>
+  <div id="clock">
+    <img src="clock.png" alt="시계">
+    <img src="h.png" id="hour1" alt="시">
+    <img src="m.png" id="minute1" alt="분">
+    <img src="s.png" id="second1" alt="초">
+  </div>
+
+</body>
+
+</html>
