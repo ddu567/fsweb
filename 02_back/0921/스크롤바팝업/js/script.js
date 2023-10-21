@@ -14,6 +14,7 @@ $(function () {
     const sct = $(window).scrollTop();
     $('#sTop').text(sct)
 
+
     pdt = sct * 0.0005;
     if (pdt <= 1) {
       $('#pdt_basic').css('opacity', pdt);
@@ -25,7 +26,8 @@ $(function () {
       $('nav').removeClass('fixed')
     }
 
-    if (sct >= 2300) {0
+    if (sct >= 2300) {
+      0
       $('.s4_cover>div').addClass('active');
     }
 

@@ -2,303 +2,309 @@
 <html lang="ko">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>다소니 심리상담</title>
-<link rel="stylesheet" href="css/main.css">
-<script src="http://code.jquery.com/jquery-3.1.1.js"></script>
-<script src="js/main.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다소니 심리상담</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 
 <body>
-<header>
-<h1 id="logo">
-    <a href="#"><img src="img/dasoni_logo.png" alt="logo"></a>
-</h1><!-- //#logo -->
-<div id="gnb">
-    <div class="headerLine"></div>
-    <nav>
-        <ul class="menu">
-            <li>
-                <a href="#">ABOUT 다소니</a>
-                <ul class="sub">
-                    <li><a href="#">인사말</a></li>
-                    <li><a href="#">연혁</a></li>
-                    <li><a href="#">오시는 길</a></li>
+    <header>
+        <h1 id="logo">
+            <a href="#"><img src="img/dasoni_logo.png" alt="logo"></a>
+        </h1><!-- //#logo -->
+        <div id="gnb">
+            <div class="headerLine"></div>
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <a href="#">ABOUT 다소니</a>
+                        <ul class="sub">
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">연혁</a></li>
+                            <li><a href="#">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">심리상담</a>
+                        <ul class="sub">
+                            <li><a href="#">관계테라피</a></li>
+                            <li><a href="#">성인심리상담</a></li>
+                            <li><a href="#">청춘상담</a></li>
+                            <li><a href="#">청소년심리상담</a></li>
+                            <li><a href="#">심리상담 예약 신청</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">집단상담</a>
+                        <ul class="sub">
+                            <li><a href="#">소개</a></li>
+                            <li><a href="#">상담일정</a></li>
+                            <li><a href="#">집단상담 예약 신청</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">전문심리검사</a>
+                        <ul class="sub">
+                            <li><a href="#">안내</a></li>
+                            <li><a href="#">성인심리검사</a></li>
+                            <li><a href="#">청소년심리검사</a></li>
+                            <li><a href="#">아동심리검사</a></li>
+                            <li><a href="#">신경심리검사</a></li>
+                            <li><a href="#">심리검사 예약 신청</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">소통</a>
+                        <ul class="sub">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">마음산책</a></li>
+                            <li><a href="#">비밀고민상담</a></li>
+                            <li><a href="#">후기</a></li>
+                        </ul>
+                    </li>
                 </ul>
+            </nav>
+        </div><!-- //#gnb -->
+    </header>
+
+    <section id="main">
+        <ul class="slider">
+            <li>
+                <a href="#"><img src="img/main_visual1.jpg" alt="슬라이드1"></a>
+                <div class="sm_tbox">
+                    <h2 class="t1txt0">다소니 심리상담센터</h2>
+                    <p class="t2txt0">당신의 소중한 관계를, 현하기 어려운 감정들을, 다양한 고민과 스트레스를,<br>
+                        따뜻한 상담과 전문적인 검사로 치유할 수 있게 도와드리겠습니다. </p>
+                </div>
             </li>
             <li>
-                <a href="#">심리상담</a>
-                <ul class="sub">
-                    <li><a href="#">관계테라피</a></li>
-                    <li><a href="#">성인심리상담</a></li>
-                    <li><a href="#">청춘상담</a></li>
-                    <li><a href="#">청소년심리상담</a></li>
-                    <li><a href="#">심리상담 예약 신청</a></li>
-                </ul>
+                <a href="#"><img src="img/main_visual2.jpg" alt="슬라이드2"></a>
+                <div class="sm_tbox">
+                    <h2 class="t1txt1">관계테라피</h2>
+                    <p class="t2txt1">따뜻한 상담과 전문적인 검사로 치유할 수 있게 도와드리겠습니다.<br>
+                        타인과의 관계 속에서 지치고 상처받은 마음을 관계테라피를 통해 보살필 수 있습니다. </p>
+                </div>
             </li>
             <li>
-                <a href="#">집단상담</a>
-                <ul class="sub">
-                    <li><a href="#">소개</a></li>
-                    <li><a href="#">상담일정</a></li>
-                    <li><a href="#">집단상담 예약 신청</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">전문심리검사</a>
-                <ul class="sub">
-                    <li><a href="#">안내</a></li>
-                    <li><a href="#">성인심리검사</a></li>
-                    <li><a href="#">청소년심리검사</a></li>
-                    <li><a href="#">아동심리검사</a></li>
-                    <li><a href="#">신경심리검사</a></li>
-                    <li><a href="#">심리검사 예약 신청</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">소통</a>
-                <ul class="sub">
-                    <li><a href="#">공지사항</a></li>
-                    <li><a href="#">마음산책</a></li>
-                    <li><a href="#">비밀고민상담</a></li>
-                    <li><a href="#">후기</a></li>
-                </ul>
+                <a href="#"><img src="img/main_visual3.jpg" alt="슬라이드3"></a>
+                <div class="sm_tbox">
+                    <h2 class="t1txt2">청춘상담</h2>
+                    <p class="t2txt2">따뜻한 상담과 전문적인 검사로 치유할 수 있게 도와드리겠습니다.<br>
+                        진로, 취업과 같은 현실적인 문제, 자존감, 정체성에 대한 문제, 내면의 문제처럼 혼자 해결하기 어려운 청춘들의 고민과 지친 마음을 들어드리고 도와드립니다. </p>
+                </div>
             </li>
         </ul>
-    </nav>
-</div><!-- //#gnb -->
-</header>
 
-<section id="main">
-    <ul class="slider">
-        <li>
-            <a href="#"><img src="img/main_visual1.jpg" alt="슬라이드1"></a>
-            <div class="sm_tbox">
-                <h2 class="t1txt">다소니 심리상담센터</h2>
-                <p class="t2txt">당신의 소중한 관계를, 현하기 어려운 감정들을, 다양한 고민과 스트레스를,<br>
-                따뜻한 상담과 전문적인 검사로 치유할 수 있게 도와드리겠습니다. </p>
-            </div>
-        </li>
-        <li>
-            <a href="#"><img src="img/main_visual2.jpg" alt="슬라이드2"></a>
-            <div class="sm_tbox">
-                <h2 class="t1txt">관계테라피</h2>
-                <p class="t2txt">따뜻한 상담과 전문적인 검사로 치유할 수 있게 도와드리겠습니다.<br>
-                타인과의 관계 속에서 지치고 상처받은 마음을 관계테라피를 통해 보살필 수 있습니다. </p>
-            </div>
-        </li>
-        <li>
-            <a href="#"><img src="img/main_visual3.jpg" alt="슬라이드3"></a>
-            <div class="s1_tbox">
-                <h2 class="t1txt">청춘상담</h2>
-                <p class="t2txt">따뜻한 상담과 전문적인 검사로 치유할 수 있게 도와드리겠습니다.<br>
-                진로, 취업과 같은 현실적인 문제, 자존감, 정체성에 대한 문제, 내면의 문제처럼 혼자 해결하기 어려운 청춘들의 고민과 지친 마음을 들어드리고 도와드립니다. </p>
-            </div>
-        </li>
-    </ul>
-</section>
+    </section>
 
-<section id="sec1">
-<div class="secTitle">
-    <img src="img/sec1_tit.png" alt="/">
-    <h2>다소니</h2>
-    <p>다소니의 전문적인 상담과 검사가 필요하시다면?</p>
-</div><!-- //.s1Title -->
-<ul>
-    <li>
-        <p>심리상담예약신청</p>
-        <a href="#">검사하기 &gt;</a>
-    </li>
-    <li>
-        <p>집단상담예약신청</p>
-        <a href="#">검사하기 &gt;</a>
-    </li>
-    <li>
-        <p>심리검사예약신청</p>
-        <a href="#">검사하기 &gt;</a>
-    </li>
-    <li>
-        <p>비밀고민상담</p>
-        <a href="#">검사하기 &gt;</a>
-    </li>
-</ul>
-</section>
+    <section id="sec1">
+        <div class="secTitle">
+            <img src="img/sec1_tit.png" alt="/">
+            <h2>다소니</h2>
+            <p>다소니의 전문적인 상담과 검사가 필요하시다면?</p>
+        </div><!-- //.s1Title -->
+        <ul class="effect">
+            <li>
+                <p>심리상담예약신청</p>
+                <a href="#">검사하기 &gt;</a>
+            </li>
+            <li>
+                <p>집단상담예약신청</p>
+                <a href="#">검사하기 &gt;</a>
+            </li>
+            <li>
+                <p>심리검사예약신청</p>
+                <a href="#">검사하기 &gt;</a>
+            </li>
+            <li>
+                <p>비밀고민상담</p>
+                <a href="#">검사하기 &gt;</a>
+            </li>
+        </ul>
+    </section>
 
-<section id="sec2">
-    <div class="secTitle">
-        <img src="img/sec2_tit.png" alt="/">
-        <h2>심리상담</h2>
-        <p>인간관계에서의 문제, 심리적 문제로 어려움을 겪고 계시는 분들에게<br> 전문적인 상담을 진행하며 효과적인 치료를 이어갑니다.</p>
-    </div><!-- //.s1Title -->
-    <ul>
-        <li>
-            <a href="#">
-                <p>관계테라피</p>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <p>청춘상담</p>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <p>아동심리상담</p>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <p>청소년심리상담</p>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <p>성인심리상담</p>
-            </a>
-        </li>
-    </ul>
-</section>
+    <section id="sec2">
+        <div class="secTitle">
+            <img src="img/sec2_tit.png" alt="/">
+            <h2>심리상담</h2>
+            <p>인간관계에서의 문제, 심리적 문제로 어려움을 겪고 계시는 분들에게<br> 전문적인 상담을 진행하며 효과적인 치료를 이어갑니다.</p>
+        </div><!-- //.s1Title -->
+        <ul class="effect">
+            <li>
+                <a href="#">
+                    <p>관계테라피</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p>청춘상담</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p>아동심리상담</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p>청소년심리상담</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p>성인심리상담</p>
+                </a>
+            </li>
+        </ul>
+    </section>
 
-<section id="sec3">
-    <div class="secTitle">
-        <img src="img/sec3_tit.png" alt="/">
-        <h2>전문심리검사</h2>
-        <p>전문심리검사를 통해 문제의 원인을 명확히 규명하여<br> 상담 목표를 설정하고 개입방향을 결정합니다.</p>
-    </div><!-- //.s1Title -->
-    <ul>
-        <li>
-            <p>성인심리검사</p>
-            <a href="#">검사안내 &gt;</a>
-        </li>
-        <li>
-            <p>청소년심리검사</p>
-            <a href="#">검사안내 &gt;</a>
-        </li>
-        <li>
-            <p>아동심리검사</p>
-            <a href="#">검사안내 &gt;</a>
-        </li>
-        <li>
-            <p>신경심리평가</p>
-            <a href="#">검사안내 &gt;</a>
-        </li>
-    </ul>
-</section>
+    <section id="sec3">
+        <div class="secTitle">
+            <img src="img/sec3_tit.png" alt="/">
+            <h2>전문심리검사</h2>
+            <p>전문심리검사를 통해 문제의 원인을 명확히 규명하여<br> 상담 목표를 설정하고 개입방향을 결정합니다.</p>
+        </div><!-- //.s1Title -->
+        <ul class="effect">
+            <li>
+                <p>성인심리검사</p>
+                <a href="#">검사안내 &gt;</a>
+            </li>
+            <li>
+                <p>청소년심리검사</p>
+                <a href="#">검사안내 &gt;</a>
+            </li>
+            <li>
+                <p>아동심리검사</p>
+                <a href="#">검사안내 &gt;</a>
+            </li>
+            <li>
+                <p>신경심리평가</p>
+                <a href="#">검사안내 &gt;</a>
+            </li>
+        </ul>
+    </section>
 
-<section id="sec4">
-    <div class="secTitle">
-        <img src="img/sec4_tit.png" alt="/">
-        <h2>전문심리검사</h2>
-        <p>전문심리검사를 통해 문제의 원인을 명확히 규명하여<br> 상담 목표를 설정하고 개입방향을 결정합니다.</p>
-        <a href="#">일정확인</a>
-    </div><!-- //.s1Title -->
-</section>
+    <section id="sec4">
+        <div class="secTitle2 effect2">
+            <img src="img/sec4_tit.png" alt="/">
+            <h2>전문심리검사</h2>
+            <p>전문심리검사를 통해 문제의 원인을 명확히 규명하여<br> 상담 목표를 설정하고 개입방향을 결정합니다.</p>
+            <a href="#">일정확인</a>
+        </div><!-- //.secTitle2 -->
+    </section>
 
-<section id="sec5">
-<div class="sec5Wrap">
-    <div class="sec5Left">
-            <a href="#" class="sec5Top">
+    <section id="sec5" >
+        <div class="sec5Wrap effect2">
+            <div class="sec5Left">
+                <a href="#" class="sec5Top">
                     <p>공지사항</p>
                     <img src="img/sec5_plus.png" alt="plus">
-            </a>
-        <ul class="sec5Cont">
-            <li>
-                <a href="#">
-                    <div class="sec5Ct">2020년 6월 한달, 심리검사 할인 깜짝 이벤트</div>
-                    <div class="sec5Cd">2020.06.01</div>
                 </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="sec5Ct">지금 내게 필요한 심리상담센터/당신의 심리적 스트레스 해소방법은...</div>
-                    <div class="sec5Cd">2020.01.30</div>
+                <ul class="sec5Cont">
+                    <li>
+                        <a href="#">
+                            <div class="sec5Ct">2020년 6월 한달, 심리검사 할인 깜짝 이벤트</div>
+                            <div class="sec5Cd">2020.06.01</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="sec5Ct">지금 내게 필요한 심리상담센터/당신의 심리적 스트레스 해소방법은...</div>
+                            <div class="sec5Cd">2020.01.30</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="sec5Ct">[네이버예약 티켓오픈] 개인, 커플 심리검사/해석 네이버예약으로...</div>
+                            <div class="sec5Cd">2019.11.14</div>
+                        </a>
+                    </li>
+                </ul>
+            </div><!-- //.sec5Left -->
+            <div class="sec5Right">
+                <a href="#" class="sec5Top">
+                    <p>상담후기</p>
+                    <img src="img/sec5_plus2.png" alt="plus">
                 </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="sec5Ct">[네이버예약 티켓오픈] 개인, 커플 심리검사/해석 네이버예약으로...</div>
-                    <div class="sec5Cd">2019.11.14</div>
-                </a>
-            </li>
-        </ul>
-    </div><!-- //.sec5Left -->
-    <div class="sec5Right">
-        <a href="#" class="sec5Top">
-                <p>상담후기</p>
-                <img src="img/sec5_plus2.png" alt="plus">
-        </a>
-    <ul class="sec5Cont">
-        <li>
-            <a href="#">
-                <div class="sec5Ct">심리상담</div>
-                <div class="sec5Cd">2020.06.11</div>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <div class="sec5Ct">심리상담</div>
-                <div class="sec5Cd">2020.04.23</div>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <div class="sec5Ct">성인심리상담</div>
-                <div class="sec5Cd">2020.02.14</div>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <div class="sec5Ct">청소년심리상담</div>
-                <div class="sec5Cd">2020.01.13</div>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <div class="sec5Ct">심리상담</div>
-                <div class="sec5Cd">2020.01.03</div>
-            </a>
-        </li>
+                <ul class="sec5Cont">
+                    <li>
+                        <a href="#">
+                            <div class="sec5Ct">심리상담</div>
+                            <div class="sec5Cd">2020.06.11</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="sec5Ct">심리상담</div>
+                            <div class="sec5Cd">2020.04.23</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="sec5Ct">성인심리상담</div>
+                            <div class="sec5Cd">2020.02.14</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="sec5Ct">청소년심리상담</div>
+                            <div class="sec5Cd">2020.01.13</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="sec5Ct">심리상담</div>
+                            <div class="sec5Cd">2020.01.03</div>
+                        </a>
+                    </li>
+                </ul>
+            </div><!-- //.sec5Right -->
+        </div><!-- //.sec5WRap -->
+    </section>
+
+    <footer>
+        <div class="fWrap">
+            <a class="fLogo">
+                <img src="img/f_logo.png" alt="bottom logo">
+            </a><!-- //.fLogo -->
+            <div class="fText">
+                <p>다소니 심리상담센터 ｜ 대표 : 김혜연</p>
+                <p>사업자등록번호 : 684-82-00196 ｜ 통신판매업신고번호 : 제2019-서울강동-1134호</p>
+                <p>본점 : (우 05356) 서울시 강동구 진황도로119, 4층 (길동)</p>
+                <p>TEL : 02-426-0982 ｜ 팩스 : 02-426-0983 ｜ 이메일 : mental0984@naver.com</p>
+                <p>COPYRIGHT(C) 사회협동조합 공존 ALL RIGHTS RESERVED</p>
+            </div><!-- //.fText -->
+            <ul class="fSns">
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div><!-- ///.fWRap -->
+    </footer>
+
+    <div class="popup">
+        <div class="popTop">
+            <img src="img/pop1.jpg" alt="popup">
+        </div><!-- //.popTop -->
+        <div class="popBottom">
+            <span class="btn1">24시간 동안 다시 열람하지 않습니다.</span>
+            <span class="btn2">닫기</span>
+        </div><!-- //.popBottom -->
+    </div><!-- //.popup -->
+
+    <ul class="fixBox">
+        <li><a href="#" class="fixTalk"></a></li>
+        <li><a href="#" class="fixPhone"></a></li>
+        <li><a href="#" class="fixClock"></a></li>
     </ul>
-    </div><!-- //.sec5Right -->
-</div><!-- //.sec5WRap -->
-</section>
-
-<footer>
-    <div class="fWrap">
-        <a class="fLogo">
-            <img src="img/f_logo.png" alt="bottom logo">
-        </a><!-- //.fLogo -->
-        <div class="fText">
-            <p>다소니 심리상담센터 ｜ 대표 : 김혜연</p>
-            <p>사업자등록번호 : 684-82-00196 ｜ 통신판매업신고번호 : 제2019-서울강동-1134호</p>
-            <p>본점 : (우 05356) 서울시 강동구 진황도로119, 4층 (길동)</p>
-            <p>TEL : 02-426-0982 ｜ 팩스 : 02-426-0983 ｜ 이메일 : mental0984@naver.com</p>
-            <p>COPYRIGHT(C) 사회협동조합 공존  ALL RIGHTS RESERVED</p>
-        </div><!-- //.fText -->
-        <ul class="fSns">
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-        </ul>
-    </div><!-- ///.fWRap -->
-</footer>
-
-<ul class="fixBox">
-    <li><a href="#" fixTalk></a></li>
-    <li><a href="#" fixPhone></a></li>
-    <li><a href="#" fixClock></a></li>
-</ul>
-
-<div class="popup">
-    <div class="popTop">
-        <img src="img/pop1.jpg" alt="popup">
-    </div><!-- //.popTop -->
-    <div class="popBottom">
-        <span class="btn1">24시간 동안 다시 열람하지 않습니다.</span>
-        <span class="btn2">닫기</span>
-    </div><!-- //.popBottom -->
-</div><!-- //.popup -->
 
 </body>
 
