@@ -151,7 +151,7 @@ public class DAO {
     }
   }
 
-  // File method
+  // dataSave
   public void dataSave() throws Exception {
     file.create();
     String str = " 번호\t 이름\t 나이\t 주소\n"
@@ -163,6 +163,8 @@ public class DAO {
     file.write(str);
   }
 
+
+  // dataLoad
   public void dataLoad() {
     try {
       file.read();

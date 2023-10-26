@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "MainClass",
+      "request": "launch",
+      "mainClass": "a1026.practice.MainClass",
+      "projectName": "Hello_f1cb47bf"
+    },
+    {
+      "type": "java",
       "name": "Ex61",
       "request": "launch",
       "mainClass": "exam.Ex61",
