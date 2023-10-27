@@ -27,7 +27,7 @@ public class DAO {
     mlist.add(m4);
   }
 
-  // CRUD
+  // CRUD (Create, Read, Update, Delete)
   // create
   private void insert(MemberDTO m) {
     // 데이터 추가

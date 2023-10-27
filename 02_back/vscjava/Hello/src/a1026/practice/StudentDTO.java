@@ -1,5 +1,6 @@
 package a1026.practice;
 
+// DTO는 Data Transfer Object의 약자로, 계층 간(Controlelr, View, Business Layer) 데이터 교환을 위한 Java Bean를 의미한다. DTO는 로직을 가지지 않는 데이터 객체이고, getter, setter 메소드만 가진 클래스를 의미한다.
 public class StudentDTO {
   private int id;
   private String name;
