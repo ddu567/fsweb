@@ -1,7 +1,8 @@
 {
   "liveServer.settings.port": 5501,
   "emmet.triggerExpansionOnTab": true,
-  "editor.suggest.showWords": true
+  "editor.suggest.showWords": true,
+  "java.compile.nullAnalysis.mode": "automatic"
 
 
 }

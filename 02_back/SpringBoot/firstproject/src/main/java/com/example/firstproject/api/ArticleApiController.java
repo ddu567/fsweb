@@ -43,7 +43,7 @@ public class ArticleApiController {
         return articleService.index();
     }
 
-    // 게이글 상세 페이지(단건 조회)
+    // 게시글 상세 페이지(단건 조회)
     @GetMapping("/api/articles/{id}")
     public Article show(@PathVariable Long id) {
         return articleService.show(id);

@@ -38,7 +38,7 @@ class CommentRepositoryTest {
 
         // 결과 출력
         System.out.println("실제 결과");
-        for(Comment comment : comments){
+        for (Comment comment : comments) {
             System.out.println(comment.toString());
         }
     }
