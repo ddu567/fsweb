@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public interface ArticleRepository extends CrudRepository<Article, Long> {
 
-    // findAll을 ArrayList로 사용하려고 Ovveride
+    // findAll을 ArrayList로 사용하려고 Override
     @Override
     ArrayList<Article> findAll();
 

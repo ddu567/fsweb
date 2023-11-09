@@ -64,7 +64,6 @@ public class ArticleApiController {
     @PatchMapping("/api/articles/{id}")
     public ResponseEntity<Article> update(@PathVariable Long id, @RequestBody ArticleForm dto) {
         // 수정할 id -> id
-
         // form에서 수정한 데이터
         Article updated = articleService.update(id, dto);
         return (updated !=null) ?

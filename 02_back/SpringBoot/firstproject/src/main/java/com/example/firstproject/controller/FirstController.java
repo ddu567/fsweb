@@ -19,4 +19,10 @@ public class FirstController {
         return "goodbye";
     }
 
+    @GetMapping("trigger")
+    public String trigger() {
+        return "trigger";
+    }
+
+
 }
