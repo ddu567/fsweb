@@ -6,6 +6,7 @@ import com.example.firstproject.entity.Comment;
 import com.example.firstproject.repository.ArticleRepository;
 import com.example.firstproject.repository.CommentRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.hibernate.boot.model.naming.IllegalIdentifierException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,15 +17,13 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-@Transactional
+@Slf4j
 public class CommentService {
     private final CommentRepository commentRepository;
 
     private final ArticleRepository articleRepository;
 
 
-
-    @Transactional(readOnly = true)
     public List<CommentDto> comments(Long articleId) {
         // 조회 댓글 목록
         List<Comment> comments = commentRepository.findByArticleId(articleId);
@@ -52,7 +51,11 @@ public class CommentService {
         return dtos;
     }
 
+    @Transactional //(readOnly = true) // DB에 접근하므로 트랜잭션 어노테이션으로 문제가 발생하면 롤백되도록 해야 함
     public CommentDto create(Long articleId, CommentDto dto) {
+
+        // log.info("입력 값 => {}", articleId);
+        // log.info("입력 값 => {}", dto);
         // 게시글 조회 및 예외 발생
         Article article = articleRepository.findById(articleId).orElseThrow(() -> new IllegalIdentifierException("딧글 생성 실패!"));
         // 댓글 Entity 생성
@@ -61,11 +64,14 @@ public class CommentService {
         // 댓글 Entity를 DB에 저장
         Comment created = commentRepository.save(comment);
         // Dto로 변경하여 반환
-        return CommentDto.createCommentDto(created);
+        // return CommentDto.createCommentDto(created);
+        CommentDto createdDto = CommentDto.createCommentDto(created);
+        log.info("반환값 => {}", createdDto);
+        return createdDto;
 
     }
 
-
+    @Transactional(readOnly = true)
     public CommentDto update(Long id, CommentDto dto) {
         Comment target = commentRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("댓글 수정 실패!"));
         // 댓글 수정
@@ -78,7 +84,7 @@ public class CommentService {
         return CommentDto.createCommentDto(updated);
     }
 
-
+    @Transactional(readOnly = true)
     public CommentDto delete(Long id) {
         // 댓글 조회 및 예외 발생
         Comment target = commentRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("댓글 삭제 실패! 대상이 없습니다."));

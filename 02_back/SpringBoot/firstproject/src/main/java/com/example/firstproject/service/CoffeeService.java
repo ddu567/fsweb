@@ -5,29 +5,28 @@ import com.example.firstproject.entity.Coffee;
 import com.example.firstproject.repository.CoffeeRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 
-import javax.transaction.Transactional;
 
 @Service
 @Slf4j
 @RequiredArgsConstructor
-@Transactional
 public class CoffeeService {
-    public final CoffeeRepository coffeeRepository;
+    private CoffeeRepository coffeeRepository;
 
     public Iterable<Coffee> index() {
         return coffeeRepository.findAll();
     }
 
 
-    public Coffee show(@PathVariable Long id) {return coffeeRepository.findById(id).orElse(null);}
+    public Coffee show(Long id) {
+        return coffeeRepository.findById(id).orElse(null);}
 
     public Coffee create(CoffeeDto coffeeDto) {
         Coffee coffee = coffeeDto.toEntity();
+        if (coffee.getId() != null) {
+            return null;
+        }
         return coffeeRepository.save(coffee);
 
     }
@@ -35,7 +34,7 @@ public class CoffeeService {
     public Coffee update(Long id, CoffeeDto coffeeDto) {
         // 1. dto -> Entity
         Coffee coffee = coffeeDto.toEntity();
-        // 2. target 조회
+        log.info("id: {}, coffee: {}", id, coffee.toString());
         Coffee target = coffeeRepository.findById(id).orElse(null);
         // 3. 잘못된 요청 처리
         if (target == null || id != coffee.getId()) {
@@ -46,9 +45,8 @@ public class CoffeeService {
 
         // 4. 업데이트
         target.patch(coffee);
-        Coffee updated = coffeeRepository.save(target);
-        return updated;
-    }
+        return coffeeRepository.save(target);
+        }
 
     public Coffee delete(Long id) {
         // 대상 찾기
