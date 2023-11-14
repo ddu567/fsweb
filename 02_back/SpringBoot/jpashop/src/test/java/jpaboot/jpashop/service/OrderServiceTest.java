@@ -6,6 +6,7 @@ import jpaboot.jpashop.domain.Order;
 import jpaboot.jpashop.domain.OrderStatus;
 import jpaboot.jpashop.domain.item.Book;
 import jpaboot.jpashop.domain.item.Item;
+import jpaboot.jpashop.exception.NotEnoughStockException;
 import jpaboot.jpashop.repository.OrderRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -18,6 +19,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
@@ -35,6 +37,8 @@ public class OrderServiceTest {
     @Test
     void order() {
         // Given
+        // 1. member생성
+        // 2. item생 성시 재고 10개
         Member member = createMember();
         Item item = createBook("시골 JPA", 10000, 10);
         int orderCount = 2;
@@ -69,7 +73,37 @@ public class OrderServiceTest {
     }
 
     @Test
-    void testOrder() {
+    void 상품주문_재고수량초과() throws Exception {
+        // Given
+        // 1. member 생성
+        // 2. item 생성시 재고 10개
+        Member member = createMember();
+        Item item = createBook("시골 JPA", 10000, 10);
+        // 3. 재고보다 많은 수량
+        int orderCount = 11;
+        // when
+        // orderservice를 실행했을 때
+        // ("재고 수량 예외가 발생해야 한다.") need more stock 예외가 발생해서 테스트 성공하게 만드시오
+        // then
+        assertThrows(NotEnoughStockException.class, () -> {
+            orderService.order(member.getId(), item.getId(), orderCount);
+        });
+    }
+
+    @Test
+    public void 주문취소() {
+        Member member = createMember();
+        Item item = createBook("시골 JPA", 10000, 10);
+        int orderCount = 2;
+        Long orderId = orderService.order(member.getId(), item.getId(), orderCount);
+
+        // when
+        orderService.cancelOrder(orderId);
+
+        // then
+        Order getOrder = orderRepository.findOne(orderId);
+        assertEquals(OrderStatus.CANCEL, getOrder.getStatus());
+        assertEquals(10, item.getStockQuantity());
 
     }
 }
