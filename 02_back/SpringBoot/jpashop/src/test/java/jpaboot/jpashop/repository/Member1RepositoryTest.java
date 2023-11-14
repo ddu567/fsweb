@@ -25,7 +25,7 @@ class Member1RepositoryTest {
     public  void save() throws Exception {
         //given
         Member member = new Member();
-        member.setUsername("memberA");
+        member.setName("memberA");
         //when
         Member savedMember = member1Repository.save(member);
 
@@ -34,7 +34,7 @@ class Member1RepositoryTest {
 
         assertNotNull(findMember);
         assertEquals(member.getId(), findMember.getId());
-        assertEquals(member.getUsername(), findMember.getUsername());
+        assertEquals(member.getName(), findMember.getName());
         assertEquals(member.toString(), findMember.toString(), "일치하는지 출력.");
         System.out.println(findMember.toString());
         System.out.println(member.toString());
