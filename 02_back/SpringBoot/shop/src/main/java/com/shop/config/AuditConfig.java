@@ -6,11 +6,13 @@ import org.springframework.data.domain.AuditorAware;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @Configuration
-@EnableJpaAuditing // JPS의 AuditorAware을 빈으로 등록
+@EnableJpaAuditing
 public class AuditConfig {
 
-    @Bean // 등록자와 수정자를 처리해 주는 AuditorAware을 빈으로 등록
-    public AuditorAware<String> auditorAware() {
+    @Bean
+    public AuditorAware<String> auditorProvider() {
         return new AuditorAwareImpl();
     }
+
 }
+//엔티티의 생성 및 수정 시간 등을 추적

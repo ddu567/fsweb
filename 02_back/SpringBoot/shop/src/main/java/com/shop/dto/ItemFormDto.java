@@ -2,7 +2,6 @@ package com.shop.dto;
 
 import com.shop.constant.ItemSellStatus;
 import com.shop.entity.Item;
-import com.shop.entity.ItemImgDto;
 import lombok.Getter;
 import lombok.Setter;
 import org.modelmapper.ModelMapper;
