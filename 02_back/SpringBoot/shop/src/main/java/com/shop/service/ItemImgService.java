@@ -32,11 +32,15 @@ public class ItemImgService {
             // uploadFile을 호출하여 파일을 업로드하고
             imgName = fileService.uploadFile(itemImgLocation, oriImgName, itemImgFile.getBytes());
             // 업로드된 파일의 이름과 url을 얻어옵니다.
+            // 저장할 경로, 실제 파일명, 파일의 바이트배열
             imgUrl = "/images/item/" + imgName;
             // WebMvcConfig - "/images/**"
             // application.properties - uploadpath D:/shop/item 폴더에 이미지 저장
             // 이미지를 불러오는 경로는 "/images/item"
         }
+        // 저장한 상품 이미지를 불러올 경로
+        // d:/shop/ 아래 item에 저장하므로 상품을 불러오는 경로는  /images/item/
+        // 앞에 /images 붙는 이유는 WebMvcConfig 클래스에 /images/**
 
         // 상품 이미지 정보 저장
         itemImg.updateItemImg(oriImgName, imgName, imgUrl);
@@ -57,7 +61,11 @@ public class ItemImgService {
             String oriImgName = itemImgFile.getOriginalFilename();
             String imgName = fileService.uploadFile(itemImgLocation, oriImgName, itemImgFile.getBytes());
             String imgUrl = "/images/item" + imgName;
-            savedItemImg.updateItemImg(oriImgName, imgName,imgUrl);
+
+            // 이미지 정보 엔티티의 필드를 업데이트합니다.
+            // savedItemImg - 영속 상태이므로 데이터를 변경하는 것만으로 변경 감지 작동
+            savedItemImg.updateItemImg(oriImgName, imgName,imgUrl); //ItemImg
+            // 트랜잭션이 끝날 때 update 쿼리가 실행
         }
     }
     // 변경된 상품 이미지 정보를 세팅해줍니다. 여기서 중요한 점은 상품 등록 때처럼 itemImgRepository.save()로 로직 호출하지 않는다.
