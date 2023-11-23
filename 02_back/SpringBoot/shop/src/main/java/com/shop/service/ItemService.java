@@ -76,7 +76,7 @@ public class ItemService {
     public Long updateItem(ItemFormDto itemFormDto, List<MultipartFile> itemImgFileList) throws Exception {
         // 상품 수정
         Item item = itemRepository.findById(itemFormDto.getId()).orElseThrow(EntityNotFoundException::new);
-        // 1. 상품 등록 화면으로부터 전달받은 상품 아이디를 이용하여 상품 엔티티 조회
+        // x. 상품 등록 화면으로부터 전달받은 상품 아이디를 이용하여 상품 엔티티 조회
         item.updateItem(itemFormDto);
 
         // 2. 상품 등록 화면으로부터 전달받은 itemFormDto를 통해 상품 엔티티 업데이트

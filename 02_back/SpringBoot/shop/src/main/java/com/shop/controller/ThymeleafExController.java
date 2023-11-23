@@ -22,7 +22,7 @@ public class ThymeleafExController {
 
     @GetMapping(value = "/ex02")
     public String thymeleafExample02(Model model) {
-        // 1. itemDto 객체 만들기
+        // x. itemDto 객체 만들기
         ItemDto itemDto = new ItemDto();
         // 2. setter 이용하여 - itemDetail - 상품 상세 설명
         itemDto.setItemDetail("상품 상세 설명");

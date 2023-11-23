@@ -16,12 +16,55 @@
                 calculateTotalPrice();
             });
         });
-        function calculateTotalPrice() {
-            const count = $("#count").val();
-            const price = $("#price").val();
-            const totalPrice = price * count;
-            $("#totalPrice").html(totalPrice + ' 원');
+
+            function calculateTotalPrice() {
+                const count = $("#count").val();
+                const price = $("#price").val();
+                const totalPrice = price * count;
+                $("#totalPrice").html(totalPrice + ' 원');
             }
+
+            function order() { // 시큐리티 사용할 경우 기본적으로 post방식
+                var token = $("meta[name='_csrf']").attr("content");
+                var header = $("meta[name='_csrf_header']").attr("content");
+
+                var url = "/order";
+                var paramData = {
+                    itemId : $("#itemId").val(),
+                    count : $("#count").val()
+            };
+
+                var param = JSON.stringify(paramData);  // json 형식으로 변환
+                $.ajax({
+                    url : url,
+                    type : "POST",
+                    contentType : "application/json",
+                    data : param,
+                    beforeSend : function(xhr) {
+                        /* 데이터 전송하기 전에 헤더 csrf값을 설정*/
+                        xhr.setRequestHeader(header, token);
+                    },
+                    dataType: "json",
+                    cache : false,
+                    success : function(result, status){
+                        alert("주문이 완료되었습니다.");
+                        location.href='/';
+                    },
+                    error : function(jqXHR, status, error) {
+                        if(jqXHR.status == '401'){
+                            alert ('로그인 후 이용해주세요.');
+                            location.href='/members/login';
+                        } else {
+                            alert(jqXHR.responseText);
+                        }
+                    }
+                });
+
+
+            }
+
+
+
     </script>
 </th:block>
 
@@ -63,10 +106,12 @@
                  class="rounded repImg" th:alt="${item.itemNm}">
         </div>
         <div class="wd50">
-            <span th:if="${item.itemSellStatus == T(com.shop.constant.ItemSellStatus).SELL}" class="badge badge-primary mgb-15">
+            <span th:if="${item.itemSellStatus == T(com.shop.constant.ItemSellStatus).SELL}"
+                  class="badge badge-primary mgb-15">
                 판매중
             </span>
-            <span th:unless="${item.itemSellStatus == T(com.shop.constant.ItemSellStatus).SELL}" class="badge badge-primary mgb-15">
+            <span th:unless="${item.itemSellStatus == T(com.shop.constant.ItemSellStatus).SELL}"
+                  class="badge badge-primary mgb-15">
                 품절
             </span>
             <div class="h4" th:text="${item.itemNm}"></div>
@@ -89,12 +134,17 @@
                 <h5>결제 금액</h5>
                 <h3 name="totalPrice" id="totalPrice" class="front-weight-bold"></h3>
             </div>
+
             <div th:if="${item.itemSellStatus == T(com.shop.constant.ItemSellStatus).SELL}" class="text-right">
-                <button type="button" class="btn btn-light border border-primary btn-lg">주문하기</button>
+                <button type="button" class="btn btn-light border border-primary btn-lg" onclick="addCart()"> 장바구니 담기</button>
+
+                <button type="button" class="btn btn-primary btn-lg" onclick="order()">주문하기</button>
+
             </div>
             <div th:unless="${item.itemSellStatus == T(com.shop.constant.ItemSellStatus).SELL}" class="text-right">
                 <button type="button" class="btn danger btn-lg">품절</button>
             </div>
+
         </div>
     </div>
     <div class="jumbotron jumbotron-fluid mgt-30">

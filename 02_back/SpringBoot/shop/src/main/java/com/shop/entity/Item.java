@@ -8,7 +8,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+
 
 @Entity
 @Table(name = "item")
@@ -58,8 +58,9 @@ public class Item  extends BaseEntity {
         this.stockNumber = restStock;
     }
 
+
     public void addStock(int stockNumber) {
         this.stockNumber += stockNumber;
-    }
+    } // 주문 취소시 주문했던 수량을 재고로 되돌려줌
 
 }

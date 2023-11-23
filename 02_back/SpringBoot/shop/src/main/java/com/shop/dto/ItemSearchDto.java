@@ -15,7 +15,7 @@ public class ItemSearchDto {
 
     private String searchQuery="";
 
-    // 1. 현재 시간과 상품 등록일을 비교해서 상품 데이터 조회
+    // x. 현재 시간과 상품 등록일을 비교해서 상품 데이터 조회
     // all 상품등록일 전체
     // 1d 최근 하루
     // 1w 최근 일주일

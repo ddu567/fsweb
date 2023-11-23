@@ -60,5 +60,11 @@ public class Order  extends BaseEntity {
             return totalPrice;
     } // 총주문금액을 구하는 메소드입니다.
 
+    public void cancelOrder() {
+        this.orderStatus = OrderStatus.CANCEL; // order => CANCEL
+        for (OrderItem orderItem : orderItems) {
+            orderItem.cancel();
+        }
+    }
 
 }
