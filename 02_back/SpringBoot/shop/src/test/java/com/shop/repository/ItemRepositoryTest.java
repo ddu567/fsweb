@@ -45,7 +45,7 @@ class ItemRepositoryTest {
 
 
     public void createItemList(){
-        for (int i = x; i <=10; i++) {
+        for (int i = 1; i <=10; i++) {
             Item item = new Item();
             item.setItemNm("테스트 상품 "+i);
             item.setPrice(10000+i);
@@ -122,7 +122,7 @@ class ItemRepositoryTest {
                 // .where(qItem.price.lt(10005)) // lt = lessthan
                 .orderBy(qItem.price.desc());
         List<Item> itemList = query.fetch();
-        // 실제로 쿼리를 시랳ㅇ하고 결과를 리스트로 가져옴
+        // 실제로 쿼리를 실행하고 결과를 리스트로 가져옴
         for (Item item: itemList) {
             System.out.println(item.toString());
         }
