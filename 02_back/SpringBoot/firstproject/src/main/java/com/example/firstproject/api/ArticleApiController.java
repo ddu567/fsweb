@@ -33,8 +33,6 @@ public class ArticleApiController {
 //    @Autowired
 //    private ArticleService articleService; => 필드 주입 방식
 
-//    @Autowired
-//    private ArticleRepository articleRepository; // 임시 => 11/6 수정 예정
 
     // Get
     // 게시글 페이지(메인 페이지)
